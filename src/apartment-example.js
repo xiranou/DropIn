@@ -1,22 +1,22 @@
-const apartment = {
-  title: '',
+export const apartment = {
+  title: 'B&B La Primula - "Yellow Room"',
   description: '',
   location: {
     longitude: '',
     latitude: '',
-    streetAddressLineOne: '',
-    streetAddressLineTwo: '',
-    city: '',
-    state: '',
-    zipcode: ''
+    streetAddressLineOne: '2535 36th Street',
+    streetAddressLineTwo: 'Apt 1F',
+    city: 'Astoria',
+    state: 'NY',
+    zipcode: '11103'
   },
-  maxGuestCount: '',
-  images: ['URL', 'URL'],
-  rooms: '',
-  bedrooms: '',
-  bathrooms: '',
-  amentites: [],
-  price: '',
+  maxGuestCount: '3',
+  images: ['/apt1.jpg', '/apt2.jpg'],
+  rooms: '2',
+  bedrooms: '1',
+  bathrooms: '1',
+  amentites: ['Laptop friendly workspace'],
+  price: '50',
   bookedTimes: [
     { start: 'TIMESTAMP', end: 'TIMESTAMP' },
     { start: 'TIMESTAMP', end: 'TIMESTAMP' }
@@ -27,12 +27,12 @@ const apartment = {
   ],
   ratings: [],
   owner: {
-    name: '',
-    image: '',
-    skillset: [],
+    name: 'Michael Angelo',
+    image: '/user.jpg',
+    skillset: ['Classical Pianist'],
     contact: {
-      email: '',
-      phoneNumber: ''
+      email: 'yamikamisama@gmail.com',
+      phoneNumber: '8565626606'
     }
   }
 };

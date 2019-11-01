@@ -29,7 +29,7 @@ function ContentCards({ apartments }) {
           className="column is-half-tablet is-one-quarter-desktop"
           key={index}
         >
-          <a className="ContentCards__card card is-flex" href={apartment.url}>
+          <div className="ContentCards__card card is-flex">
             <div className="card-image">
               <Slider {...settings}>{renderImages(apartment.images)}</Slider>
             </div>
@@ -54,7 +54,7 @@ function ContentCards({ apartments }) {
                 </span>
               </div>
             </div>
-          </a>
+          </div>
         </div>
       ))}
     </CenteredColumns>
