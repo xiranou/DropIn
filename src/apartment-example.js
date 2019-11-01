@@ -77,23 +77,23 @@ export const apartments = [
     }
   },
   {
-    title: 'B&B La Primula - "Yellow Room"',
+    title: 'Quaint Astoria Brownstone',
     description: '',
     location: {
       longitude: '',
       latitude: '',
-      streetAddressLineOne: '2535 36th Street',
-      streetAddressLineTwo: 'Apt 1F',
+      streetAddressLineOne: '2322 30th Rd',
+      streetAddressLineTwo: 'Apt 9F',
       city: 'Astoria',
       state: 'NY',
-      zipcode: '11103'
+      zipcode: '11102'
     },
     maxGuestCount: '3',
     images: ['/apt1.jpg', '/apt2.jpg'],
-    rooms: '2',
+    rooms: 'studio',
     bedrooms: '1',
     bathrooms: '1',
-    amentites: ['Laptop friendly workspace'],
+    amentites: ['Gamers'],
     price: '50',
     bookedTimes: [
       { start: 'TIMESTAMP', end: 'TIMESTAMP' },
@@ -107,7 +107,7 @@ export const apartments = [
     owner: {
       name: 'Michael Angelo',
       image: '/user.jpg',
-      skillset: ['Classical Pianist'],
+      skillset: ['Programmer'],
       contact: {
         email: 'yamikamisama@gmail.com',
         phoneNumber: '8565626606'

@@ -35,8 +35,25 @@ function ContentCards({ apartments }) {
             </div>
             <div className="card-content">
               <div className="content">
+                <span class="tag is-primary">
+                  {apartment.owner.skillset[0]}
+                </span>
                 <h4>{apartment.title}</h4>
                 <p>{apartment.description}</p>
+                <span
+                  className="has-text-weight-medium"
+                  style={{ marginRight: '10px' }}
+                >
+                  ${apartment.price}/hr
+                </span>
+                <i class="fa fa-bed" aria-hidden="true" />{' '}
+                <span style={{ marginRight: '10px' }}>
+                  {apartment.bedrooms}
+                </span>
+                <i class="fa fa-bath" aria-hidden="true" />{' '}
+                <span style={{ marginRight: '10px' }}>
+                  {apartment.bedrooms}
+                </span>
               </div>
             </div>
           </a>
