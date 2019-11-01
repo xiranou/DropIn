@@ -7,7 +7,7 @@ basic_scaling:
   idle_timeout: 10m
 
 env_variables:
-  FIREBASE_PROJECT_ID: "dropin-257301"
+  FIREBASE_PROJECT_ID: 'dropin-257301'
 
 handlers:
   - url: /stylesheets
