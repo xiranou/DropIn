@@ -1,25 +1,42 @@
-import React from "react";
-import CenteredColumns from "./CenteredColumns";
-import "./ContentCards.scss";
+import React from 'react';
+import CenteredColumns from './CenteredColumns';
+import Slider from 'react-slick';
+import './ContentCards.scss';
+import { Link, useRouter } from './../util/router.js';
 
-function ContentCards(props) {
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
+
+const renderImages = images => {
+  return images.map(url => {
+    return (
+      <Link to="/listings/1">
+        <img src={url} alt={url} />
+      </Link>
+    );
+  });
+};
+
+function ContentCards({ apartments }) {
   return (
     <CenteredColumns>
-      {props.people.map((item, index) => (
+      {apartments.map((apartment, index) => (
         <div
           className="column is-half-tablet is-one-quarter-desktop"
           key={index}
         >
-          <a className="ContentCards__card card is-flex" href={item.url}>
+          <a className="ContentCards__card card is-flex" href={apartment.url}>
             <div className="card-image">
-              <figure className="image is-4by3">
-                <img src={item.image} alt={item.title} />
-              </figure>
+              <Slider {...settings}>{renderImages(apartment.images)}</Slider>
             </div>
             <div className="card-content">
               <div className="content">
-                <h4>{item.title}</h4>
-                <p>{item.body}</p>
+                <h4>{apartment.title}</h4>
+                <p>{apartment.description}</p>
               </div>
             </div>
           </a>

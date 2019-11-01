@@ -1,10 +1,12 @@
-import React from "react";
-import ReactDom from "react-dom";
-import "./styles/global.scss";
-import App from "./pages/_app";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDom from 'react-dom';
+import './styles/global.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import App from './pages/_app';
+import * as serviceWorker from './serviceWorker';
 
-ReactDom.render(<App />, document.getElementById("root"));
+ReactDom.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

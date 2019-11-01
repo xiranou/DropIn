@@ -23,7 +23,7 @@ function App(props) {
     <ProvideAuth>
       <Router>
         <>
-          <Navbar color="primary" spaced={true} logo="" />
+          <Navbar color="primary" spaced={true} logo="/dropin-logo-white.svg" />
 
           <Switch>
             <Route exact path="/" component={IndexPage} />
@@ -72,7 +72,7 @@ function App(props) {
           <Footer
             color="white"
             size="medium"
-            logo=""
+            logo="/dropin-logo.svg"
             description="A short description of what you do here"
             copyright="© Company Name"
           />

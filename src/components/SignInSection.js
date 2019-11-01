@@ -1,15 +1,15 @@
-import React from "react";
-import Section from "./Section";
-import SectionHeader from "./SectionHeader";
-import SignIn from "./SignIn";
-import { useRouter } from "./../util/router.js";
+import React from 'react';
+import Section from './Section';
+import SectionHeader from './SectionHeader';
+import SignIn from './SignIn';
+import { useRouter } from './../util/router.js';
 
 function SignInSection(props) {
   const router = useRouter();
 
   // Go to page after signin
   const onSignin = () => {
-    router.push("/dashboard");
+    router.push('/listings');
   };
 
   return (
