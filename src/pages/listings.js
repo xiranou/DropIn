@@ -1,14 +1,22 @@
-import React from "react";
-import ContentCardsSection from "./../components/ContentCardsSection";
+import React from 'react';
+import ContentCardsSection from './../components/ContentCardsSection';
+import Map from './../components/Map';
 
 function ListingsPage(props) {
   return (
-    <ContentCardsSection
-      color="white"
-      size="medium"
-      title="Featured Content"
-      subtitle=""
-    />
+    <div className="columns">
+      <div className="column is-half-desktop">
+        <ContentCardsSection
+          color="white"
+          size="medium"
+          title="Featured Content"
+          subtitle=""
+        />
+      </div>
+      <div className="column is-half-desktop">
+        <Map />
+      </div>
+    </div>
   );
 }
 

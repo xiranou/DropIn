@@ -41,18 +41,16 @@ function ContentCards({ apartments }) {
                 <h4>{apartment.title}</h4>
                 <p>{apartment.description}</p>
                 <span
-                  className="has-text-weight-medium"
+                  className="has-text-weight-heavy"
                   style={{ marginRight: '10px' }}
                 >
                   ${apartment.price}/hr
                 </span>
-                <i class="fa fa-bed" aria-hidden="true" />{' '}
                 <span style={{ marginRight: '10px' }}>
-                  {apartment.bedrooms}
+                  {apartment.bedrooms} Bedrooms
                 </span>
-                <i class="fa fa-bath" aria-hidden="true" />{' '}
                 <span style={{ marginRight: '10px' }}>
-                  {apartment.bedrooms}
+                  {apartment.bathrooms} Bathrooms
                 </span>
               </div>
             </div>
