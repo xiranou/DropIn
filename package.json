@@ -12,6 +12,7 @@
     "express": "^4.17.1",
     "firebase": "^7.2.2",
     "firebaseui": "^4.2.0",
+    "nodemon": "^1.19.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-firebaseui": "^4.0.0",
@@ -25,7 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently --kill-others-on-fail \"node server.js\" \"npm start\""
+    "dev": "concurrently --kill-others-on-fail \"node server.js\" \"react-scripts start\""
   },
   "eslintConfig": {
     "extends": "react-app"
