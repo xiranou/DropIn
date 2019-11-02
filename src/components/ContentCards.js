@@ -2,7 +2,7 @@ import React from 'react';
 import CenteredColumns from './CenteredColumns';
 import Slider from 'react-slick';
 import './ContentCards.scss';
-import { Link, useRouter } from './../util/router.js';
+import { Link } from './../util/router.js';
 
 const settings = {
   infinite: true,
@@ -12,9 +12,9 @@ const settings = {
 };
 
 const renderImages = images => {
-  return images.map(url => {
+  return images.map((url, index) => {
     return (
-      <Link to="/listings/1">
+      <Link to="/listings/1" key={`apartment-image-${index}`}>
         <img src={url} alt={url} />
       </Link>
     );

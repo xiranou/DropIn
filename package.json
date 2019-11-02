@@ -17,13 +17,15 @@
     "react-router-dom": "5.1.0",
     "react-scripts": "3.2.0",
     "react-slick": "^0.25.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "uuid": "^3.3.3"
   },
   "scripts": {
     "start": "NODE_ENV=production node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "deploy": "npm run build && gcloud app deploy",
     "dev": "concurrently --kill-others-on-fail \"node server.js\" \"react-scripts start\""
   },
   "eslintConfig": {
