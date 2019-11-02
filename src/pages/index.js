@@ -1,7 +1,7 @@
-import React from 'react';
-import LandingHeroSection from './../components/LandingHeroSection';
-import FeaturesSection from './../components/FeaturesSection';
-import { useRouter } from './../util/router.js';
+import React from "react";
+import LandingHeroSection from "./../components/LandingHeroSection";
+import FeaturesSection from "./../components/FeaturesSection";
+import { useRouter } from "./../util/router.js";
 
 function IndexPage(props) {
   const router = useRouter();
@@ -15,7 +15,7 @@ function IndexPage(props) {
         subtitle="Committing is hard — so don’t. Work out at any gym, try any workout and do it all with one app. Try ClassPass for free."
         buttonText="Try for free"
         buttonOnClick={() => {
-          router.push('/classes');
+          router.push("/classes");
         }}
       />
       <FeaturesSection
