@@ -1,220 +1,179 @@
-import * as uuid from "uuid/v4";
-
-// const classDropin = {
-//   title: 'B&B La Primula - "Yellow Room"',
-//   description: '',
-//   location: {
-//     name: '',
-//     description: '',
-//     longitude: '',
-//     latitude: '',
-//     streetAddressLineOne: '2535 36th Street',
-//     streetAddressLineTwo: 'Apt 1F',
-//     city: 'Astoria',
-//     state: 'NY',
-//     zipcode: '11103'
-//   },
-//   images: ['/apt1.jpg', '/apt2.jpg'],
-//   amentites: ['Laptop friendly workspace'],
-//   classDates: [
-//     {
-//       start: 'TIMESTAMP',
-//       end: 'TIMESTAMP',
-//       maxGuestCount: '3',
-//       isFull: false,
-//       whenToArrive: '',
-//       materialsNeeded: ''
-//     }
-//   ],
-//   ratings: [],
-//   owner: {
-//     name: 'Michael Angelo',
-//     image: '/user.jpg',
-//     skillset: ['Classical Pianist'],
-//     socialMedia: {
-//       instagram: ''
-//     },
-//     contact: {
-//       email: 'yamikamisama@gmail.com',
-//       phoneNumber: '8565626606'
-//     }
-//   }
-// };
+import * as uuid from 'uuid/v4';
 
 export const classes = [
   {
     id: uuid(),
-    title: "Opera Singer`s Dream Studio",
+    title: 'Opera Singer`s Dream Studio',
     description:
-      "Join us for this 50 minute class. The single most important thing a human can do for their health is exercise regularly. Therefore, a fit BODY is a healthy BODY, and a healthy body leads to a healthy mind and spirit. BODY is a fitness methodology based on the core principles of CrossFit, HIIT, and traditional Strength and Conditioning programs. Body is designed for anyone seeking self-improvement, whatever that means to YOU. Classes are team-oriented to develop social connections, build a passionate fitness community, and encourage participants to push harder than they would on their own. You only have one BODY and each day is an opportunity to improve. AM Booking Policy: Cancel your class enrollment no less than 12-hour prior to the class start time to avoid a no-show fee of $10 or loss of session credit. Enrollment cancelation less than 12-hour prior to the class start time will incur a $10 late cancelation fee or loss of session credit.",
-    level: "",
+      'Join us for this 50 minute class. The single most important thing a human can do for their health is exercise regularly. Therefore, a fit BODY is a healthy BODY, and a healthy body leads to a healthy mind and spirit. BODY is a fitness methodology based on the core principles of CrossFit, HIIT, and traditional Strength and Conditioning programs. Body is designed for anyone seeking self-improvement, whatever that means to YOU. Classes are team-oriented to develop social connections, build a passionate fitness community, and encourage participants to push harder than they would on their own. You only have one BODY and each day is an opportunity to improve. AM Booking Policy: Cancel your class enrollment no less than 12-hour prior to the class start time to avoid a no-show fee of $10 or loss of session credit. Enrollment cancelation less than 12-hour prior to the class start time will incur a $10 late cancelation fee or loss of session credit.',
+    level: '',
     location: {
-      name: "",
-      description: "",
-      longitude: "-73.9143598",
-      latitude: "40.7682166",
-      streetAddressLineOne: "2535 36th Street",
-      streetAddressLineTwo: "Apt 1F",
-      city: "Astoria",
-      state: "NY",
-      zipcode: "11103"
+      name: '',
+      description: '',
+      longitude: '-73.9143598',
+      latitude: '40.7682111',
+      streetAddressLineOne: '2535 36th Street',
+      streetAddressLineTwo: 'Apt 1F',
+      city: 'Astoria',
+      state: 'NY',
+      zipcode: '11103'
     },
-    images: ["/apt1.jpg", "/apt2.jpg"],
-    amentites: ["Piano"],
-    price: "50",
+    images: ['/apt1.jpg', '/apt2.jpg'],
+    amentites: ['Piano'],
+    price: '50',
     classDates: [
       {
-        start: "TIMESTAMP",
-        end: "TIMESTAMP",
-        maxGuestCount: "3",
+        start: 'TIMESTAMP',
+        end: 'TIMESTAMP',
+        maxGuestCount: '3',
         isFull: false,
-        whenToArrive: "",
-        materialsNeeded: ""
+        whenToArrive: '',
+        materialsNeeded: ''
       }
     ],
     ratings: [
       {
         score: 4.8,
         review:
-          "Such a great way to learn a new language.  I have been trying for years to learn Japanese and this has really opened my world up with the right level of intensity."
+          'Such a great way to learn a new language.  I have been trying for years to learn Japanese and this has really opened my world up with the right level of intensity.'
       }
     ],
     owner: {
-      name: "Michael Angelo",
-      image: "/user.jpg",
-      skillset: ["Music"],
+      name: 'Michael Angelo',
+      image: '/user.jpg',
+      skillset: ['Music'],
       socialMedia: {
-        instagram: ""
+        instagram: ''
       },
       contact: {
-        email: "yamikamisama@gmail.com",
-        phoneNumber: "8565626606"
+        email: 'yamikamisama@gmail.com',
+        phoneNumber: '8565626606'
       }
     }
   },
   {
     id: uuid(),
-    title: "Quaint Astoria Brownstone",
-    description: "",
+    title: 'Quaint Astoria Brownstone',
+    description: '',
     location: {
-      name: "",
-      description: "",
-      longitude: "-73.9264744",
-      latitude: "40.766257",
-      streetAddressLineOne: "2322 30th Rd",
-      streetAddressLineTwo: "Apt 9F",
-      city: "Astoria",
-      state: "NY",
-      zipcode: "11102"
+      name: '',
+      description: '',
+      longitude: '-73.9264744',
+      latitude: '40.766259',
+      streetAddressLineOne: '2322 30th Rd',
+      streetAddressLineTwo: 'Apt 9F',
+      city: 'Astoria',
+      state: 'NY',
+      zipcode: '11102'
     },
-    images: ["/apt1.jpg", "/apt2.jpg"],
-    amentites: ["Gamers"],
-    price: "50",
+    images: ['/apt1.jpg', '/apt2.jpg'],
+    amentites: ['Gamers'],
+    price: '50',
     classDates: [
       {
-        start: "TIMESTAMP",
-        end: "TIMESTAMP",
-        maxGuestCount: "3",
+        start: 'TIMESTAMP',
+        end: 'TIMESTAMP',
+        maxGuestCount: '3',
         isFull: false,
-        whenToArrive: "",
-        materialsNeeded: ""
+        whenToArrive: '',
+        materialsNeeded: ''
       }
     ],
     ratings: [],
     owner: {
-      name: "Xiran Ou",
-      image: "/user.jpg",
-      skillset: ["Programmer"],
+      name: 'Xiran Ou',
+      image: '/user.jpg',
+      skillset: ['Programmer'],
       socialMedia: {
-        instagram: ""
+        instagram: ''
       },
       contact: {
-        email: "xiranou@gmail.com",
-        phoneNumber: "8565626606"
+        email: 'xiranou@gmail.com',
+        phoneNumber: '8565626606'
       }
     }
   },
   {
     id: uuid(),
-    title: "Knitters Haven",
-    description: "",
+    title: 'Knitters Haven',
+    description: '',
     location: {
-      name: "",
-      description: "",
-      longitude: "-73.9265166",
-      latitude: "40.7678631",
-      streetAddressLineOne: "3094 Crescent St",
-      streetAddressLineTwo: "Apt 1F",
-      city: "Astoria",
-      state: "NY",
-      zipcode: "11103"
+      name: '',
+      description: '',
+      longitude: '-73.9265166',
+      latitude: '40.7678655',
+      streetAddressLineOne: '3094 Crescent St',
+      streetAddressLineTwo: 'Apt 1F',
+      city: 'Astoria',
+      state: 'NY',
+      zipcode: '11103'
     },
-    images: ["/apt1.jpg", "/apt2.jpg"],
-    amentites: ["Laptop friendly workspace"],
-    price: "50",
+    images: ['/apt1.jpg', '/apt2.jpg'],
+    amentites: ['Laptop friendly workspace'],
+    price: '50',
     classDates: [
       {
-        start: "TIMESTAMP",
-        end: "TIMESTAMP",
-        maxGuestCount: "3",
+        start: 'TIMESTAMP',
+        end: 'TIMESTAMP',
+        maxGuestCount: '3',
         isFull: false,
-        whenToArrive: "",
-        materialsNeeded: ""
+        whenToArrive: '',
+        materialsNeeded: ''
       }
     ],
     ratings: [],
     owner: {
-      name: "Michael Angelo",
-      image: "/user.jpg",
-      skillset: ["Classical Pianist"],
+      name: 'Michael Angelo',
+      image: '/user.jpg',
+      skillset: ['Classical Pianist'],
       socialMedia: {
-        instagram: ""
+        instagram: ''
       },
       contact: {
-        email: "yamikamisama@gmail.com",
-        phoneNumber: "8565626606"
+        email: 'yamikamisama@gmail.com',
+        phoneNumber: '8565626606'
       }
     }
   },
   {
     id: uuid(),
-    title: "Artist Loft",
-    description: "",
+    title: 'Artist Loft',
+    description: '',
     location: {
-      name: "",
-      description: "",
-      longitude: "-73.9265166",
-      latitude: "40.7678631",
-      streetAddressLineOne: "56 Richardson St",
-      streetAddressLineTwo: "Apt 2A",
-      city: "Brooklyn",
-      state: "NY",
-      zipcode: "11211"
+      name: '',
+      description: '',
+      longitude: '-73.9265199',
+      latitude: '40.7678633',
+      streetAddressLineOne: '56 Richardson St',
+      streetAddressLineTwo: 'Apt 2A',
+      city: 'Brooklyn',
+      state: 'NY',
+      zipcode: '11211'
     },
-    images: ["/apt1.jpg", "/apt2.jpg"],
-    amentites: ["Laptop friendly workspace"],
-    price: "50",
+    images: ['/apt1.jpg', '/apt2.jpg'],
+    amentites: ['Laptop friendly workspace'],
+    price: '50',
     classDates: [
       {
-        start: "TIMESTAMP",
-        end: "TIMESTAMP",
-        maxGuestCount: "3",
+        start: 'TIMESTAMP',
+        end: 'TIMESTAMP',
+        maxGuestCount: '3',
         isFull: false,
-        whenToArrive: "",
-        materialsNeeded: ""
+        whenToArrive: '',
+        materialsNeeded: ''
       }
     ],
     ratings: [],
     owner: {
-      name: "Margaret Decarlo",
-      image: "/user.jpg",
-      skillset: ["Designer"],
+      name: 'Margaret Decarlo',
+      image: '/user.jpg',
+      skillset: ['Designer'],
       socialMedia: {
-        instagram: ""
+        instagram: ''
       },
       contact: {
-        email: "margaretdecarlo@gmail.com",
-        phoneNumber: "8565626606"
+        email: 'margaretdecarlo@gmail.com',
+        phoneNumber: '8565626606'
       }
     }
   }

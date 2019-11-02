@@ -1,17 +1,6 @@
-/* Style the video: 100% width and height to cover the entire window */
 #myVideo {
   display: block;
   min-width: 100%;
   position: fixed;
   top: 0;
-}
-
-/* Add some content at the bottom of the video/page */
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
 }

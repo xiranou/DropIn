@@ -7,14 +7,14 @@ import './LandingHeroSection.scss';
 function LandingHeroSection(props) {
   return (
     <Section
-      class="hero is-success is-fullheight"
+      class="hero is-success is-fullheight-with-navbar"
       color={props.color}
       size={props.size}
     >
       <video id="myVideo" autoplay="true" muted="true" loop="true">
         <source src="/cooking-demo.mp4" type="video/mp4" />
       </video>
-      <div className="container">
+      <div className="container" style={{ margin: '200px auto 0' }}>
         <SectionHeader
           title={props.title}
           subtitle={props.subtitle}
