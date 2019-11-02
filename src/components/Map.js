@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import * as R from "ramda";
 import GoogleMapReact from "google-map-react";
 
 import MapMarker from "./MapMarker";
@@ -30,15 +30,18 @@ const getCurrentLocation = () => {
 
 const GoogleMap = props => {
   const [clickedMarker, setClickedMarker] = React.useState(null);
+  const [showMarkers, setShowMarkers] = React.useState(false);
   const [pos, updatePos] = React.useState({
-    lat: null,
-    lng: null
+    lat: Number(props.center.lat),
+    lng: Number(props.center.lng)
   });
   React.useEffect(() => {
-    getCurrentLocation().then(userPos => {
-      updatePos(userPos);
-    });
-  }, []);
+    if (R.isEmpty(props.center)) {
+      getCurrentLocation().then(userPos => {
+        updatePos(userPos);
+      });
+    }
+  }, [props.center]);
 
   const isPositionLocated = !!pos.lat && !!pos.lng;
 
@@ -51,24 +54,24 @@ const GoogleMap = props => {
           }}
           center={pos}
           zoom={props.zoom}
-          onChildClick={id => {
-            setClickedMarker(id);
-          }}
+          onChildClick={setClickedMarker}
+          onGoogleApiLoaded={() => setShowMarkers(true)}
         >
-          {props.classes.map(classDetail => {
-            const clicked = clickedMarker === classDetail.id;
+          {showMarkers &&
+            props.classes.map(classDetail => {
+              const clicked = clickedMarker === classDetail.id;
 
-            return (
-              <MapMarker
-                key={classDetail.id}
-                classDetail={classDetail}
-                lat={classDetail.location.latitude}
-                lng={classDetail.location.longitude}
-                clicked={clicked}
-                onHover={props.onHover}
-              />
-            );
-          })}
+              return (
+                <MapMarker
+                  key={classDetail.id}
+                  classDetail={classDetail}
+                  lat={classDetail.location.latitude}
+                  lng={classDetail.location.longitude}
+                  clicked={clicked}
+                  onHover={props.onHover}
+                />
+              );
+            })}
         </GoogleMapReact>
       </div>
     )
@@ -76,7 +79,9 @@ const GoogleMap = props => {
 };
 
 GoogleMap.defaultProps = {
-  zoom: 11
+  zoom: 11,
+  center: {},
+  onHover: () => void 0
 };
 
 export default GoogleMap;
