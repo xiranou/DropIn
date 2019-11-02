@@ -3,6 +3,7 @@ import * as R from "ramda";
 import GoogleMapReact from "google-map-react";
 
 import MapMarker from "./MapMarker";
+import Spinner from "./Spinner";
 
 const getCurrentLocation = () => {
   return new Promise((resolve, reject) => {
@@ -45,36 +46,36 @@ const GoogleMap = props => {
 
   const isPositionLocated = !!pos.lat && !!pos.lng;
 
-  return (
-    isPositionLocated && (
-      <div style={{ height: "100vh", width: "100%" }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{
-            key: process.env.REACT_APP_MAP_KEY
-          }}
-          center={pos}
-          zoom={props.zoom}
-          onChildClick={setClickedMarker}
-          onGoogleApiLoaded={() => setShowMarkers(true)}
-        >
-          {showMarkers &&
-            props.classes.map(classDetail => {
-              const clicked = clickedMarker === classDetail.id;
+  return isPositionLocated ? (
+    <div style={{ height: "100vh", width: "100%" }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{
+          key: process.env.REACT_APP_MAP_KEY
+        }}
+        center={pos}
+        zoom={props.zoom}
+        onChildClick={setClickedMarker}
+        onGoogleApiLoaded={() => setShowMarkers(true)}
+      >
+        {showMarkers &&
+          props.classes.map(classDetail => {
+            const clicked = clickedMarker === classDetail.id;
 
-              return (
-                <MapMarker
-                  key={classDetail.id}
-                  classDetail={classDetail}
-                  lat={classDetail.location.latitude}
-                  lng={classDetail.location.longitude}
-                  clicked={clicked}
-                  onHover={props.onHover}
-                />
-              );
-            })}
-        </GoogleMapReact>
-      </div>
-    )
+            return (
+              <MapMarker
+                key={classDetail.id}
+                classDetail={classDetail}
+                lat={classDetail.location.latitude}
+                lng={classDetail.location.longitude}
+                clicked={clicked}
+                onHover={props.onHover}
+              />
+            );
+          })}
+      </GoogleMapReact>
+    </div>
+  ) : (
+    <Spinner />
   );
 };
 
