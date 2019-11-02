@@ -47,7 +47,7 @@ const GoogleMap = props => {
   const isPositionLocated = !!pos.lat && !!pos.lng;
 
   return isPositionLocated ? (
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div style={{ height: props.height, width: props.width }}>
       <GoogleMapReact
         bootstrapURLKeys={{
           key: process.env.REACT_APP_MAP_KEY
@@ -80,6 +80,8 @@ const GoogleMap = props => {
 };
 
 GoogleMap.defaultProps = {
+  height: "100vh",
+  width: "100%",
   zoom: 11,
   center: {},
   onHover: () => void 0

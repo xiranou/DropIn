@@ -1,11 +1,11 @@
-import React from 'react';
-import Divider from '../components/Divider';
-import Button from '../components/Button';
-import Map from '../components/Map';
-import Spinner from '../components/Spinner';
+import React from "react";
+import Divider from "../components/Divider";
+import Button from "../components/Button";
+import Map from "../components/Map";
+import Spinner from "../components/Spinner";
 
-import { useParams } from '../util/router.js';
-import { useClassList } from '../util/requests';
+import { useParams } from "../util/router.js";
+import { useClassList } from "../util/requests";
 
 function ClassDetailsPage(props) {
   const { id } = useParams();
@@ -23,7 +23,7 @@ function ClassDetailsPage(props) {
           <section>
             <img
               className="hero full-width"
-              style={{ width: '100%' }}
+              style={{ width: "100%" }}
               src={classDetails.images[0]}
               alt="class-detail.hero"
             />
@@ -64,7 +64,7 @@ function ClassDetailsPage(props) {
             <section>
               <h1 className="title">Reviews</h1>
               <div>
-                {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{' '}
+                {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{" "}
                 {classDetails.ratings.length} rating(s)
               </div>
               <div>DropIns say: {classDetails.ratings[0].review}</div>
@@ -76,19 +76,18 @@ function ClassDetailsPage(props) {
             <section>
               <h1 className="title">About the Class</h1>
               <div>
-                Activity: {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{' '}
+                Activity: {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{" "}
               </div>
               <div>Level: All Levels</div>
               <div>{classDetails.description}</div>
             </section>
           </div>
-
+        </div>
+        <div className="column is-one-quarter">
           <div className="card">
-            <section>
-              <h1 className="title">About the Space</h1>
-              <div>Amentities: {classDetails.amentites[0]}</div>
-              <div>{classDetails.description}</div>
+            <section className="section is-small">
               <Map
+                height="258px"
                 classes={[classDetails]}
                 zoom={15}
                 center={{
@@ -97,10 +96,10 @@ function ClassDetailsPage(props) {
                 }}
               />
             </section>
+            <h1 className="title">About the Space</h1>
+            <div>Amentities: {classDetails.amentites[0]}</div>
+            <div>{classDetails.description}</div>
           </div>
-        </div>
-        <div className="column is-one-quarter">
-          <div className="card"></div>
         </div>
       </div>
     </div>
