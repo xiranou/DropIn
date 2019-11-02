@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import GoogleMapReact from 'google-map-react';
 
+import MapMarker from './MapMarker';
+
+
 const getCurrentLocation = () => {
   return new Promise((resolve, reject) => {
     const pos = {
@@ -24,6 +27,7 @@ const getCurrentLocation = () => {
 }
 
 const GoogleMap = ({ children, ...props }) => {
+  const [clickedMarker, setClickedMarker] = React.useState(null);
   const [pos, updatePos] = React.useState({
     lat: null,
     lng: null
@@ -33,18 +37,37 @@ const GoogleMap = ({ children, ...props }) => {
       updatePos(userPos);
     })
   }, []);
+
   const isPositionLocated = !!pos.lat && !!pos.lng;
+
   return isPositionLocated && (
     <div style={{ height: '100vh', width: '100%' }}>
       <GoogleMapReact
         bootstrapURLKeys={{
           key: process.env.REACT_APP_MAP_KEY,
         }}
-        defaultCenter={pos}
         center={pos}
-        defaultZoom={props.zoom}
+        zoom={props.zoom}
+        onChildClick={(id) => {
+          setClickedMarker(id);
+        }}
       >
-        {children}
+        {
+          props.apartments.map((apt, index) => {
+            const id = `apt-marker-${index}`;
+            const clicked = clickedMarker === id;
+            return (
+              <MapMarker
+                key={id}
+                lat={apt.location.latitude}
+                lng={apt.location.longitude}
+                title={apt.title}
+                clicked={clicked}
+                onHover={() => console.log('Hover: ', id)}
+              />
+            )
+          })
+        }
       </GoogleMapReact>
     </div>
   )

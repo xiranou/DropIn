@@ -12,9 +12,9 @@ const settings = {
 };
 
 const renderImages = images => {
-  return images.map(url => {
+  return images.map((url, index) => {
     return (
-      <Link to="/listings/1">
+      <Link to="/listings/1" key={`apartment-image-${index}`}>
         <img src={url} alt={url} />
       </Link>
     );
