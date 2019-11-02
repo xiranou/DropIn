@@ -13,12 +13,7 @@ function Navbar(props) {
         <div className="navbar-brand">
           <div className="navbar-item">
             <Link to="/">
-              <img
-                className="image"
-                style={{ maxHeight: '4rem' }}
-                src={props.logo}
-                alt="Logo"
-              />
+              <img className="image" src={props.logo} alt="Logo" />
             </Link>
           </div>
           <div
