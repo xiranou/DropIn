@@ -1,12 +1,14 @@
 import React from 'react';
 import ContentCardsSection from '../components/ContentCardsSection';
+import Section from '../components/Section';
 import Map from '../components/Map';
-import { classes } from '../example';
 import { tags } from '../util/tags';
+import { useClassList } from '../util/requests';
 
 const ClassesPage = () => {
   const [activeFilters, setActiveFilters] = React.useState([]);
   const [focusedClassId, setFocusedClassId] = React.useState(null);
+  const [classList] = useClassList();
 
   const onClickFilter = filter => {
     const newFilters = [...activeFilters];
@@ -21,8 +23,10 @@ const ClassesPage = () => {
   };
 
   const filteredClasses = () => {
-    if (activeFilters.length === 0) return classes;
-    return classes.filter(apt => activeFilters.includes(apt.owner.skillset[0]));
+    if (activeFilters.length === 0) return classList;
+    return classList.filter(apt =>
+      activeFilters.includes(apt.owner.skillset[0])
+    );
   };
 
   const isActiveClass = filter =>
@@ -31,15 +35,17 @@ const ClassesPage = () => {
   return (
     <div className="columns">
       <div className="column is-half-desktop">
-        {tags.map((filter, index) => (
-          <span
-            key={`filter-${index}`}
-            onClick={() => onClickFilter(filter)}
-            className={`tag ${isActiveClass(filter)}`}
-          >
-            {filter}
-          </span>
-        ))}
+        <Section style={{ paddingBottom: '0' }}>
+          {tags.map((filter, index) => (
+            <span
+              key={`filter-${index}`}
+              onClick={() => onClickFilter(filter)}
+              className={`tag tagHover ${isActiveClass(filter)}`}
+            >
+              {filter}
+            </span>
+          ))}
+        </Section>
         <ContentCardsSection
           color="white"
           size="medium"

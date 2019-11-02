@@ -1,8 +1,8 @@
-import React from 'react';
-import Section from './Section';
-import SectionHeader from './SectionHeader';
-import Button from './Button';
-import './LandingHeroSection.scss';
+import React from "react";
+import Section from "./Section";
+import SectionHeader from "./SectionHeader";
+import Button from "./Button";
+import "./LandingHeroSection.scss";
 
 function LandingHeroSection(props) {
   return (
@@ -11,10 +11,10 @@ function LandingHeroSection(props) {
       color={props.color}
       size={props.size}
     >
-      <video id="myVideo" autoplay="true" muted="true" loop="true">
+      <video id="myVideo" autoPlay="true" muted="true" loop="true">
         <source src="/cooking-demo.mp4" type="video/mp4" />
       </video>
-      <div className="container" style={{ margin: '200px auto 0' }}>
+      <div className="container" style={{ margin: "200px auto 0" }}>
         <SectionHeader
           title={props.title}
           subtitle={props.subtitle}
