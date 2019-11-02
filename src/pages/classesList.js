@@ -15,6 +15,7 @@ const filtersList = [
 
 const ClassesPage = () => {
   const [activeFilters, setActiveFilters] = React.useState([]);
+  const [focusedClassId, setFocusedClassId] = React.useState(null);
 
   const onClickFilter = filter => {
     const newFilters = [...activeFilters];
@@ -52,10 +53,11 @@ const ClassesPage = () => {
           color="white"
           size="medium"
           classes={filteredClasses()}
+          focusedClassId={focusedClassId}
         />
       </div>
       <div className="column is-half-desktop">
-        <Map classes={filteredClasses()} />
+        <Map classes={filteredClasses()} onHover={setFocusedClassId} />
       </div>
     </div>
   );
