@@ -2,7 +2,6 @@ import React from 'react';
 import Section from './Section';
 import SectionHeader from './SectionHeader';
 import ContentCards from './ContentCards';
-import { apartments } from '../apartment-example';
 
 function ContentCardsSection(props) {
   return (
@@ -14,7 +13,7 @@ function ContentCardsSection(props) {
           centered={true}
           size={3}
         />
-        <ContentCards apartments={apartments} />
+        <ContentCards apartments={props.apartments} />
       </div>
     </Section>
   );

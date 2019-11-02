@@ -39,7 +39,7 @@ export const apartment = {
 
 export const apartments = [
   {
-    title: 'B&B La Primula - "Yellow Room"',
+    title: 'Opera Singer`s Dream Studio',
     description: '',
     location: {
       longitude: '',
@@ -55,7 +55,7 @@ export const apartments = [
     rooms: '2',
     bedrooms: '1',
     bathrooms: '1',
-    amentites: ['Laptop friendly workspace'],
+    amentites: ['Piano'],
     price: '50',
     bookedTimes: [
       { start: 'TIMESTAMP', end: 'TIMESTAMP' },
@@ -69,7 +69,7 @@ export const apartments = [
     owner: {
       name: 'Michael Angelo',
       image: '/user.jpg',
-      skillset: ['Classical Pianist'],
+      skillset: ['Music'],
       contact: {
         email: 'yamikamisama@gmail.com',
         phoneNumber: '8565626606'
@@ -105,17 +105,17 @@ export const apartments = [
     ],
     ratings: [],
     owner: {
-      name: 'Michael Angelo',
+      name: 'Xiran Ou',
       image: '/user.jpg',
       skillset: ['Programmer'],
       contact: {
-        email: 'yamikamisama@gmail.com',
+        email: 'xiranou@gmail.com',
         phoneNumber: '8565626606'
       }
     }
   },
   {
-    title: 'B&B La Primula - "Yellow Room"',
+    title: 'Knitters Haven',
     description: '',
     location: {
       longitude: '',
@@ -153,16 +153,16 @@ export const apartments = [
     }
   },
   {
-    title: 'B&B La Primula - "Yellow Room"',
+    title: 'Artist Loft',
     description: '',
     location: {
       longitude: '',
       latitude: '',
-      streetAddressLineOne: '2535 36th Street',
-      streetAddressLineTwo: 'Apt 1F',
-      city: 'Astoria',
+      streetAddressLineOne: '56 Richardson St',
+      streetAddressLineTwo: 'Apt 2A',
+      city: 'Brooklyn',
       state: 'NY',
-      zipcode: '11103'
+      zipcode: '11211'
     },
     maxGuestCount: '3',
     images: ['/apt1.jpg', '/apt2.jpg'],
@@ -181,11 +181,11 @@ export const apartments = [
     ],
     ratings: [],
     owner: {
-      name: 'Michael Angelo',
+      name: 'Margaret Decarlo',
       image: '/user.jpg',
-      skillset: ['Classical Pianist'],
+      skillset: ['Designer'],
       contact: {
-        email: 'yamikamisama@gmail.com',
+        email: 'margaretdecarlo@gmail.com',
         phoneNumber: '8565626606'
       }
     }

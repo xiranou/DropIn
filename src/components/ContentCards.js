@@ -25,33 +25,38 @@ function ContentCards({ apartments }) {
   return (
     <CenteredColumns>
       {apartments.map((apartment, index) => (
-        <div
-          className="column is-half-tablet is-one-quarter-desktop"
-          key={index}
-        >
+        <div className="column is-full" key={index}>
           <div className="ContentCards__card card is-flex">
-            <div className="card-image">
-              <Slider {...settings}>{renderImages(apartment.images)}</Slider>
-            </div>
             <div className="card-content">
-              <div className="content">
-                <span class="tag is-primary">
-                  {apartment.owner.skillset[0]}
-                </span>
-                <h4>{apartment.title}</h4>
-                <p>{apartment.description}</p>
-                <span
-                  className="has-text-weight-heavy"
-                  style={{ marginRight: '10px' }}
-                >
-                  ${apartment.price}/hr
-                </span>
-                <span style={{ marginRight: '10px' }}>
-                  {apartment.bedrooms} Bedrooms
-                </span>
-                <span style={{ marginRight: '10px' }}>
-                  {apartment.bathrooms} Bathrooms
-                </span>
+              <div className="columns">
+                <div className="column is-three-fifths">
+                  <div className="content">
+                    <h4>{apartment.title}</h4>
+                    <p>{apartment.description}</p>
+                    <span
+                      className="has-text-weight-heavy"
+                      style={{ marginRight: '10px' }}
+                    >
+                      ${apartment.price}/hr
+                    </span>
+                    <span style={{ marginRight: '10px' }}>
+                      {apartment.bedrooms} Bedrooms
+                    </span>
+                    <span style={{ marginRight: '10px' }}>
+                      {apartment.bathrooms} Bathrooms
+                    </span>
+                    <span class="tag is-primary">
+                      {apartment.owner.skillset[0]}
+                    </span>
+                  </div>
+                </div>
+                <div className="column is-two-fifths">
+                  <div className="card-image">
+                    <Slider {...settings}>
+                      {renderImages(apartment.images)}
+                    </Slider>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
