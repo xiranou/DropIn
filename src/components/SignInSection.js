@@ -9,7 +9,7 @@ function SignInSection(props) {
 
   // Go to page after signin
   const onSignin = () => {
-    router.push('/listings');
+    router.push('/classes');
   };
 
   return (

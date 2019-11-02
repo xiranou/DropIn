@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
 
 function NavbarContainer(props) {
   return (
     <nav
+      style={{ backgroundColor: 'transparent' }}
       className={
-        "navbar" +
-        (props.color ? ` is-${props.color}` : "") +
-        (props.spaced ? " is-spaced" : "")
+        'navbar is-transparent' +
+        (props.color ? ` is-${props.color}` : '') +
+        (props.spaced ? ' is-spaced' : '')
       }
     >
       {props.children}

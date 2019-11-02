@@ -1,10 +1,10 @@
-import React from "react";
-import Divider from "../components/Divider";
-import Button from "../components/Button";
-import Map from "../components/Map";
+import React from 'react';
+import Divider from '../components/Divider';
+import Button from '../components/Button';
+import Map from '../components/Map';
 
-import { useParams } from "../util/router.js";
-import { classes } from "../example";
+import { useParams } from '../util/router.js';
+import { classes } from '../example';
 
 function ClassDetailsPage(props) {
   const { id } = useParams();
@@ -14,7 +14,7 @@ function ClassDetailsPage(props) {
       <section>
         <img
           className="hero full-width"
-          style={{ width: "100%" }}
+          style={{ width: '100%' }}
           src={classDetails.images[0]}
           alt="class-detail.hero"
         />
@@ -32,7 +32,7 @@ function ClassDetailsPage(props) {
           />
         </figure>
       </section>
-      <Divider color={"grey"} />
+      <Divider color={'grey'} />
 
       <section>
         <div>Saturday, Nov 2</div>
@@ -40,24 +40,24 @@ function ClassDetailsPage(props) {
         <div>{classDetails.owner.name}</div>
         <i class="far fa-calendar-plus"></i>
       </section>
-      <Divider color={"grey"} />
+      <Divider color={'grey'} />
 
       <section>
         <div>{classDetails.owner.name}</div>
         <div>{classDetails.owner.name}</div>
       </section>
-      <Divider color={"grey"} />
+      <Divider color={'grey'} />
 
       <section>
         <h1 className="title">Reviews</h1>
         <div>
-          {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{" "}
+          {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{' '}
           {classDetails.ratings.length} rating(s)
         </div>
         <div>DropIns say: {classDetails.ratings[0].review}</div>
         <a>Read all Reviews</a>
       </section>
-      <Divider color={"grey"} />
+      <Divider color={'grey'} />
 
       <section>
         <h1 className="title">About the Class</h1>
@@ -65,7 +65,7 @@ function ClassDetailsPage(props) {
         <div>Level: All Levels</div>
         <div>{classDetails.description}</div>
       </section>
-      <Divider color={"grey"} />
+      <Divider color={'grey'} />
 
       <section>
         <h1 className="title">About the Space</h1>
@@ -80,7 +80,7 @@ function ClassDetailsPage(props) {
           }}
         />
       </section>
-      <Divider color={"grey"} />
+      <Divider color={'grey'} />
     </div>
   );
 }

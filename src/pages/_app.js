@@ -24,7 +24,11 @@ function App(props) {
     <ProvideAuth>
       <Router>
         <>
-          <Navbar color="primary" spaced={true} logo="/dropin-logo-white.svg" />
+          <Navbar
+            color="transparent"
+            spaced={true}
+            logo="/dropin-logo-white.svg"
+          />
 
           <Switch>
             <Route exact path="/" component={IndexPage} />
