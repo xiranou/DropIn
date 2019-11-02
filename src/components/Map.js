@@ -53,7 +53,7 @@ const GoogleMap = ({ children, ...props }) => {
         }}
       >
         {
-          props.apartments.map((apt) => {
+          props.classes.map((apt) => {
             const clicked = clickedMarker === apt.id;
 
             return (

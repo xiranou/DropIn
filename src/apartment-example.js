@@ -1,9 +1,11 @@
 import * as uuid from "uuid/v4";
 
-export const apartment = {
+const classDropin = {
   title: 'B&B La Primula - "Yellow Room"',
   description: '',
   location: {
+    name: '',
+    description: '',
     longitude: '',
     latitude: '',
     streetAddressLineOne: '2535 36th Street',
@@ -12,26 +14,26 @@ export const apartment = {
     state: 'NY',
     zipcode: '11103'
   },
-  maxGuestCount: '3',
   images: ['/apt1.jpg', '/apt2.jpg'],
-  rooms: '2',
-  bedrooms: '1',
-  bathrooms: '1',
   amentites: ['Laptop friendly workspace'],
-  price: '50',
-  bookedTimes: [
-    { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-    { start: 'TIMESTAMP', end: 'TIMESTAMP' }
-  ],
-  availability: [
-    { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-    { start: 'TIMESTAMP', end: 'TIMESTAMP' }
+  classDates: [
+    {
+      start: 'TIMESTAMP',
+      end: 'TIMESTAMP',
+      maxGuestCount: '3',
+      isFull: false,
+      whenToArrive: '',
+      materialsNeeded: ''
+    }
   ],
   ratings: [],
   owner: {
     name: 'Michael Angelo',
     image: '/user.jpg',
     skillset: ['Classical Pianist'],
+    socialMedia: {
+      instagram: ''
+    },
     contact: {
       email: 'yamikamisama@gmail.com',
       phoneNumber: '8565626606'
@@ -39,12 +41,15 @@ export const apartment = {
   }
 };
 
-export const apartments = [
+export const classes = [
   {
     id: uuid(),
     title: 'Opera Singer`s Dream Studio',
     description: '',
+    level: '',
     location: {
+      name: '',
+      description: '',
       longitude: '-73.9143598',
       latitude: '40.7682166',
       streetAddressLineOne: '2535 36th Street',
@@ -53,26 +58,32 @@ export const apartments = [
       state: 'NY',
       zipcode: '11103'
     },
-    maxGuestCount: '3',
     images: ['/apt1.jpg', '/apt2.jpg'],
-    rooms: '2',
-    bedrooms: '1',
-    bathrooms: '1',
     amentites: ['Piano'],
     price: '50',
-    bookedTimes: [
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' }
+    classDates: [
+      {
+        start: 'TIMESTAMP',
+        end: 'TIMESTAMP',
+        maxGuestCount: '3',
+        isFull: false,
+        whenToArrive: '',
+        materialsNeeded: ''
+      }
     ],
-    availability: [
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' }
+    ratings: [
+      {
+        score: 10,
+        review: ''
+      }
     ],
-    ratings: [],
     owner: {
       name: 'Michael Angelo',
       image: '/user.jpg',
       skillset: ['Music'],
+      socialMedia: {
+        instagram: ''
+      },
       contact: {
         email: 'yamikamisama@gmail.com',
         phoneNumber: '8565626606'
@@ -84,6 +95,8 @@ export const apartments = [
     title: 'Quaint Astoria Brownstone',
     description: '',
     location: {
+      name: '',
+      description: '',
       longitude: '-73.9264744',
       latitude: '40.766257',
       streetAddressLineOne: '2322 30th Rd',
@@ -92,26 +105,27 @@ export const apartments = [
       state: 'NY',
       zipcode: '11102'
     },
-    maxGuestCount: '3',
     images: ['/apt1.jpg', '/apt2.jpg'],
-    rooms: 'studio',
-    bedrooms: '1',
-    bathrooms: '1',
     amentites: ['Gamers'],
     price: '50',
-    bookedTimes: [
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' }
-    ],
-    availability: [
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' }
+    classDates: [
+      {
+        start: 'TIMESTAMP',
+        end: 'TIMESTAMP',
+        maxGuestCount: '3',
+        isFull: false,
+        whenToArrive: '',
+        materialsNeeded: ''
+      }
     ],
     ratings: [],
     owner: {
       name: 'Xiran Ou',
       image: '/user.jpg',
       skillset: ['Programmer'],
+      socialMedia: {
+        instagram: ''
+      },
       contact: {
         email: 'xiranou@gmail.com',
         phoneNumber: '8565626606'
@@ -123,6 +137,8 @@ export const apartments = [
     title: 'Knitters Haven',
     description: '',
     location: {
+      name: '',
+      description: '',
       longitude: '-73.9265166',
       latitude: '40.7678631',
       streetAddressLineOne: '3094 Crescent St',
@@ -131,26 +147,27 @@ export const apartments = [
       state: 'NY',
       zipcode: '11103'
     },
-    maxGuestCount: '3',
     images: ['/apt1.jpg', '/apt2.jpg'],
-    rooms: '2',
-    bedrooms: '1',
-    bathrooms: '1',
     amentites: ['Laptop friendly workspace'],
     price: '50',
-    bookedTimes: [
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' }
-    ],
-    availability: [
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' }
+    classDates: [
+      {
+        start: 'TIMESTAMP',
+        end: 'TIMESTAMP',
+        maxGuestCount: '3',
+        isFull: false,
+        whenToArrive: '',
+        materialsNeeded: ''
+      }
     ],
     ratings: [],
     owner: {
       name: 'Michael Angelo',
       image: '/user.jpg',
       skillset: ['Classical Pianist'],
+      socialMedia: {
+        instagram: ''
+      },
       contact: {
         email: 'yamikamisama@gmail.com',
         phoneNumber: '8565626606'
@@ -162,6 +179,8 @@ export const apartments = [
     title: 'Artist Loft',
     description: '',
     location: {
+      name: '',
+      description: '',
       longitude: '-73.9265166',
       latitude: '40.7678631',
       streetAddressLineOne: '56 Richardson St',
@@ -170,26 +189,27 @@ export const apartments = [
       state: 'NY',
       zipcode: '11211'
     },
-    maxGuestCount: '3',
     images: ['/apt1.jpg', '/apt2.jpg'],
-    rooms: '2',
-    bedrooms: '1',
-    bathrooms: '1',
     amentites: ['Laptop friendly workspace'],
     price: '50',
-    bookedTimes: [
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' }
-    ],
-    availability: [
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' },
-      { start: 'TIMESTAMP', end: 'TIMESTAMP' }
+    classDates: [
+      {
+        start: 'TIMESTAMP',
+        end: 'TIMESTAMP',
+        maxGuestCount: '3',
+        isFull: false,
+        whenToArrive: '',
+        materialsNeeded: ''
+      }
     ],
     ratings: [],
     owner: {
       name: 'Margaret Decarlo',
       image: '/user.jpg',
       skillset: ['Designer'],
+      socialMedia: {
+        instagram: ''
+      },
       contact: {
         email: 'margaretdecarlo@gmail.com',
         phoneNumber: '8565626606'

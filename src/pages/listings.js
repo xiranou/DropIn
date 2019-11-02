@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ContentCardsSection from './../components/ContentCardsSection';
 import Map from './../components/Map';
-import { apartments } from '../apartment-example';
+import { classes } from '../apartment-example';
 
 const filtersList = [
   'Classical',
@@ -33,10 +33,10 @@ class ListingsPage extends Component {
     }
   };
 
-  filteredApartments = () => {
+  filteredClasses = () => {
     const { activeFilters } = this.state;
-    if (activeFilters.length === 0) return apartments;
-    return apartments.filter(apt =>
+    if (activeFilters.length === 0) return classes;
+    return classes.filter(apt =>
       activeFilters.includes(apt.owner.skillset[0])
     );
   };
@@ -60,11 +60,11 @@ class ListingsPage extends Component {
           <ContentCardsSection
             color="white"
             size="medium"
-            apartments={this.filteredApartments()}
+            classes={this.filteredClasses()}
           />
         </div>
         <div className="column is-half-desktop">
-          <Map apartments={this.filteredApartments()} />
+          <Map classes={this.filteredClasses()} />
         </div>
       </div>
     );

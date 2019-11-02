@@ -13,7 +13,7 @@ function ContentCardsSection(props) {
           centered={true}
           size={3}
         />
-        <ContentCards apartments={props.apartments} />
+        <ContentCards classes={props.classes} />
       </div>
     </Section>
   );
