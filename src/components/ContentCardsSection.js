@@ -5,7 +5,11 @@ import ContentCards from './ContentCards';
 
 function ContentCardsSection(props) {
   return (
-    <Section color={props.color} size={props.size}>
+    <Section
+      style={{ height: '80vh', overflow: 'scroll' }}
+      color={props.color}
+      size={props.size}
+    >
       <div className="container">
         <SectionHeader
           title={props.title}

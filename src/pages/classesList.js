@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ContentCardsSection from './../components/ContentCardsSection';
-import Map from './../components/Map';
-import { classes } from '../apartment-example';
+import ContentCardsSection from '../components/ContentCardsSection';
+import Map from '../components/Map';
+import { classes } from '../example';
 
 const filtersList = [
   'Classical',
@@ -13,7 +13,7 @@ const filtersList = [
   'Photo Shoots'
 ];
 
-class ListingsPage extends Component {
+class ClassesPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,9 +36,7 @@ class ListingsPage extends Component {
   filteredClasses = () => {
     const { activeFilters } = this.state;
     if (activeFilters.length === 0) return classes;
-    return classes.filter(apt =>
-      activeFilters.includes(apt.owner.skillset[0])
-    );
+    return classes.filter(apt => activeFilters.includes(apt.owner.skillset[0]));
   };
 
   render() {
@@ -71,4 +69,4 @@ class ListingsPage extends Component {
   }
 }
 
-export default ListingsPage;
+export default ClassesPage;

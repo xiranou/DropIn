@@ -1,7 +1,7 @@
-import React from "react";
-import Section from "./Section";
-import SectionHeader from "./SectionHeader";
-import SectionButton from "./SectionButton";
+import React from 'react';
+import Section from './Section';
+import SectionHeader from './SectionHeader';
+import Button from './Button';
 
 function HeroSection(props) {
   return (
@@ -14,13 +14,13 @@ function HeroSection(props) {
           size={1}
         />
         <div className="buttons is-centered">
-          <SectionButton
+          <Button
             parentColor={props.color}
             size="medium"
             onClick={props.buttonOnClick}
           >
             {props.buttonText}
-          </SectionButton>
+          </Button>
         </div>
       </div>
     </Section>

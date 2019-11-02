@@ -14,7 +14,7 @@ const settings = {
 const renderImages = images => {
   return images.map((url, index) => {
     return (
-      <Link to="/listings/1" key={`apartment-image-${index}`}>
+      <Link to="/classes/1" key={`apartment-image-${index}`}>
         <img src={url} alt={url} />
       </Link>
     );
@@ -24,36 +24,47 @@ const renderImages = images => {
 function ContentCards({ classes }) {
   return (
     <CenteredColumns>
-      {classes.map((klass, index) => (
+      {classes.map((classDetails, index) => (
         <div className="column is-full" key={index}>
           <div className="ContentCards__card card is-flex">
             <div className="card-content">
               <div className="columns">
                 <div className="column is-three-fifths">
                   <div className="content">
-                    <h4>{klass.title}</h4>
-                    <p>{klass.description}</p>
+                    <Link to={`/classes/${index}`}>
+                      <h4>{classDetails.title}</h4>
+                    </Link>
+                    <p
+                      style={{
+                        display: '-webkit-box',
+                        webkitLineClamp: '3',
+                        webkitBoxOrient: 'vertical',
+                        overflow: 'hidden'
+                      }}
+                    >
+                      {classDetails.description}
+                    </p>
                     <span
                       className="has-text-weight-heavy"
                       style={{ marginRight: '10px' }}
                     >
-                      ${klass.price}/hr
+                      ${classDetails.price}/hr
                     </span>
                     <span style={{ marginRight: '10px' }}>
-                      {klass.bedrooms} Bedrooms
+                      {classDetails.bedrooms} Bedrooms
                     </span>
                     <span style={{ marginRight: '10px' }}>
-                      {klass.bathrooms} Bathrooms
+                      {classDetails.bathrooms} Bathrooms
                     </span>
                     <span class="tag is-primary">
-                      {klass.owner.skillset[0]}
+                      {classDetails.owner.skillset[0]}
                     </span>
                   </div>
                 </div>
                 <div className="column is-two-fifths">
                   <div className="card-image">
                     <Slider {...settings}>
-                      {renderImages(klass.images)}
+                      {renderImages(classDetails.images)}
                     </Slider>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
-import React from "react";
-import Section from "./Section";
-import SectionHeader from "./SectionHeader";
-import SectionButton from "./SectionButton";
+import React from 'react';
+import Section from './Section';
+import SectionHeader from './SectionHeader';
+import Button from './Button';
 
 function CtaSection(props) {
   return (
@@ -16,13 +16,13 @@ function CtaSection(props) {
             />
           </div>
           <div className="column is-narrow">
-            <SectionButton
+            <Button
               parentColor={props.color}
               size="medium"
               onClick={props.buttonOnClick}
             >
               {props.buttonText}
-            </SectionButton>
+            </Button>
           </div>
         </div>
       </div>

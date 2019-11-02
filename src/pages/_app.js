@@ -8,8 +8,8 @@ import SignupPage from './signup';
 import ForgotpassPage from './forgotpass';
 import ChangepassPage from './changepass';
 import PricingPage from './pricing';
-import ListingsPage from './listings';
-import ListingsIdPage from './listingsid';
+import ClassesList from './classesList';
+import ClassDetailsPage from './classdetails';
 import ConfirmationPage from './confirmation';
 import BookingsPage from './bookings';
 import ProfilePage from './profile';
@@ -43,9 +43,9 @@ function App(props) {
 
             <Route exact path="/pricing" component={PricingPage} />
 
-            <Route exact path="/listings" component={ListingsPage} />
+            <Route exact path="/classes" component={ClassesList} />
 
-            <Route exact path="/listings/:id" component={ListingsIdPage} />
+            <Route exact path="/classes/:id" component={ClassDetailsPage} />
 
             <Route exact path="/confirmation" component={ConfirmationPage} />
 

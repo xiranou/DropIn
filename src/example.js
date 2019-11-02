@@ -1,4 +1,4 @@
-import * as uuid from "uuid/v4";
+import * as uuid from 'uuid/v4';
 
 const classDropin = {
   title: 'B&B La Primula - "Yellow Room"',
@@ -45,7 +45,8 @@ export const classes = [
   {
     id: uuid(),
     title: 'Opera Singer`s Dream Studio',
-    description: '',
+    description:
+      'Join us for this 50 minute class. The single most important thing a human can do for their health is exercise regularly. Therefore, a fit BODY is a healthy BODY, and a healthy body leads to a healthy mind and spirit. BODY is a fitness methodology based on the core principles of CrossFit, HIIT, and traditional Strength and Conditioning programs. Body is designed for anyone seeking self-improvement, whatever that means to YOU. Classes are team-oriented to develop social connections, build a passionate fitness community, and encourage participants to push harder than they would on their own. You only have one BODY and each day is an opportunity to improve. AM Booking Policy: Cancel your class enrollment no less than 12-hour prior to the class start time to avoid a no-show fee of $10 or loss of session credit. Enrollment cancelation less than 12-hour prior to the class start time will incur a $10 late cancelation fee or loss of session credit.',
     level: '',
     location: {
       name: '',
@@ -73,8 +74,9 @@ export const classes = [
     ],
     ratings: [
       {
-        score: 10,
-        review: ''
+        score: 4.8,
+        review:
+          'Such a great way to learn a new language.  I have been trying for years to learn Japanese and this has really opened my world up with the right level of intensity.'
       }
     ],
     owner: {
