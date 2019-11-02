@@ -61,11 +61,11 @@ const GoogleMap = props => {
             return (
               <MapMarker
                 key={classDetail.id}
+                classDetail={classDetail}
                 lat={classDetail.location.latitude}
                 lng={classDetail.location.longitude}
-                title={classDetail.title}
                 clicked={clicked}
-                onHover={() => props.onHover(classDetail.id)}
+                onHover={props.onHover}
               />
             );
           })}
