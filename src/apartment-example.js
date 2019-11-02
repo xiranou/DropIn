@@ -286,3 +286,43 @@ export const apartments = [
 // Sports
 // Travel Tips
 // Volunteering
+
+// New Language
+// Learn How to Draw
+// Basic Car Repairs
+// Home Cleaning and Decluttering
+// Photography
+// Learn to Play the Guitar
+// Learn to Play the Piano
+// Gardening
+// Cook
+// Crafting
+// Fine Arts
+// Life Skills
+// Dancing
+// Life Coach
+// Sewing, Stitching and Patching
+// Skill of Mindful Living
+// Creating a Personal Budget
+// How to Repair Credit
+// Manage Your Debt
+// Money Management
+
+// Health and Fitness
+//   - Breathing/Deep Breathing Skill
+//   - Swimming Skill
+//   - Yoga & Stretch
+//   - Get Good Sleep
+//   - Fitness Coaching
+
+// Communication Skills
+//   - Write a Professional Resume
+//   - How to Write an Effective Speech
+//   - How to Speak to an Audience
+//   - Learn to Network
+
+// Business Skills
+//   - Business Skills Fundamentals
+//   - Accounting and Bookkeeping Basics
+//   - Art of Negotiating
+//   - Goal-Setting Skills

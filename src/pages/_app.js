@@ -7,6 +7,7 @@ import SigninPage from './signin';
 import SignupPage from './signup';
 import ForgotpassPage from './forgotpass';
 import ChangepassPage from './changepass';
+import PricingPage from './pricing';
 import ListingsPage from './listings';
 import ListingsIdPage from './listingsid';
 import ConfirmationPage from './confirmation';
@@ -39,6 +40,8 @@ function App(props) {
             <Route exact path="/forgotpass" component={ForgotpassPage} />
 
             <Route exact path="/changepass" component={ChangepassPage} />
+
+            <Route exact path="/pricing" component={PricingPage} />
 
             <Route exact path="/listings" component={ListingsPage} />
 
