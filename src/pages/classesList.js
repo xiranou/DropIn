@@ -1,72 +1,66 @@
-import React, { Component } from 'react';
-import ContentCardsSection from '../components/ContentCardsSection';
-import Map from '../components/Map';
-import { classes } from '../example';
+import React, { Component } from "react";
+import ContentCardsSection from "../components/ContentCardsSection";
+import Map from "../components/Map";
+import { classes } from "../example";
 
 const filtersList = [
-  'Classical',
-  'Sports',
-  'Singing',
-  'Dancing',
-  'Cooking',
-  'Designer',
-  'Photo Shoots'
+  "Classical",
+  "Sports",
+  "Singing",
+  "Dancing",
+  "Cooking",
+  "Designer",
+  "Photo Shoots"
 ];
 
-class ClassesPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeFilters: []
-    };
-  }
+const ClassesPage = () => {
+  const [activeFilters, setActiveFilters] = React.useState([]);
+  const [focusedClassId, setFocusedClassId] = React.useState(null);
 
-  onClickFilter = filter => {
-    let activeFilters = [...this.state.activeFilters]; // make a separate copy of the array
-    const index = activeFilters.indexOf(filter);
+  const onClickFilter = filter => {
+    const newFilters = [...activeFilters];
+    const index = newFilters.indexOf(filter);
     if (index !== -1) {
-      activeFilters.splice(index, 1);
-      this.setState({ activeFilters });
+      newFilters.splice(index, 1);
+      setActiveFilters(newFilters);
     } else {
-      activeFilters.push(filter);
-      this.setState({ activeFilters });
+      newFilters.push(filter);
+      setActiveFilters(newFilters);
     }
   };
 
-  filteredClasses = () => {
-    const { activeFilters } = this.state;
+  const filteredClasses = () => {
     if (activeFilters.length === 0) return classes;
     return classes.filter(apt => activeFilters.includes(apt.owner.skillset[0]));
   };
 
-  render() {
-    const isActiveClass = filter =>
-      this.state.activeFilters.includes(filter) ? 'is-info' : 'is-light';
+  const isActiveClass = filter =>
+    activeFilters.includes(filter) ? "is-info" : "is-light";
 
-    return (
-      <div className="columns">
-        <div className="column is-half-desktop">
-          {filtersList.map((filter, index) => (
-            <span
-              key={`filter-${index}`}
-              onClick={() => this.onClickFilter(filter)}
-              class={`tag ${isActiveClass(filter)}`}
-            >
-              {filter}
-            </span>
-          ))}
-          <ContentCardsSection
-            color="white"
-            size="medium"
-            classes={this.filteredClasses()}
-          />
-        </div>
-        <div className="column is-half-desktop">
-          <Map classes={this.filteredClasses()} />
-        </div>
+  return (
+    <div className="columns">
+      <div className="column is-half-desktop">
+        {filtersList.map((filter, index) => (
+          <span
+            key={`filter-${index}`}
+            onClick={() => onClickFilter(filter)}
+            className={`tag ${isActiveClass(filter)}`}
+          >
+            {filter}
+          </span>
+        ))}
+        <ContentCardsSection
+          color="white"
+          size="medium"
+          classes={filteredClasses()}
+          focusedClassId={focusedClassId}
+        />
       </div>
-    );
-  }
-}
+      <div className="column is-half-desktop">
+        <Map classes={filteredClasses()} onHover={setFocusedClassId} />
+      </div>
+    </div>
+  );
+};
 
 export default ClassesPage;

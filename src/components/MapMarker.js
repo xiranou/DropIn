@@ -1,23 +1,25 @@
 import React from "react";
 
 import MarkerBlue from "./MarkerBlue";
+import ContentCard from "./ContentCard";
 
-const MapMarker = (props) => {
+const MapMarker = props => {
+  React.useEffect(() => {
+    if (props.$hover) {
+      props.onHover(props.classDetail.id);
+    } else {
+      props.onHover(null);
+    }
+  }, [props, props.$hover]);
+
   if (props.clicked) {
-    return (
-      <div>Clicked</div>
-    )
-  } else if (props.$hover) {
-    props.onHover();
-    return (
-      <div>Hover</div>
-    )
+    return <ContentCard classDetail={props.classDetail} />;
   } else {
     return (
       <MarkerBlue
         lat={props.lat}
         lng={props.lng}
-        text={props.title}
+        text={props.classDetail.title}
       />
     );
   }

@@ -1,12 +1,12 @@
-import React from 'react';
-import Section from './Section';
-import SectionHeader from './SectionHeader';
-import ContentCards from './ContentCards';
+import React from "react";
+import Section from "./Section";
+import SectionHeader from "./SectionHeader";
+import ContentCards from "./ContentCards";
 
 function ContentCardsSection(props) {
   return (
     <Section
-      style={{ height: '80vh', overflow: 'scroll' }}
+      style={{ height: "80vh", overflow: "scroll" }}
       color={props.color}
       size={props.size}
     >
@@ -17,7 +17,10 @@ function ContentCardsSection(props) {
           centered={true}
           size={3}
         />
-        <ContentCards classes={props.classes} />
+        <ContentCards
+          classes={props.classes}
+          focusedClassId={props.focusedClassId}
+        />
       </div>
     </Section>
   );
