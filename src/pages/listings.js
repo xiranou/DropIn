@@ -48,8 +48,9 @@ class ListingsPage extends Component {
     return (
       <div className="columns">
         <div className="column is-half-desktop">
-          {filtersList.map(filter => (
+          {filtersList.map((filter, index) => (
             <span
+              key={`filter-${index}`}
               onClick={() => this.onClickFilter(filter)}
               class={`tag ${isActiveClass(filter)}`}
             >
@@ -63,7 +64,7 @@ class ListingsPage extends Component {
           />
         </div>
         <div className="column is-half-desktop">
-          <Map />
+          <Map apartments={this.filteredApartments()} />
         </div>
       </div>
     );

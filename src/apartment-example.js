@@ -1,3 +1,5 @@
+import * as uuid from "uuid/v4";
+
 export const apartment = {
   title: 'B&B La Primula - "Yellow Room"',
   description: '',
@@ -39,11 +41,12 @@ export const apartment = {
 
 export const apartments = [
   {
+    id: uuid(),
     title: 'Opera Singer`s Dream Studio',
     description: '',
     location: {
-      longitude: '',
-      latitude: '',
+      longitude: '-73.9143598',
+      latitude: '40.7682166',
       streetAddressLineOne: '2535 36th Street',
       streetAddressLineTwo: 'Apt 1F',
       city: 'Astoria',
@@ -77,11 +80,12 @@ export const apartments = [
     }
   },
   {
+    id: uuid(),
     title: 'Quaint Astoria Brownstone',
     description: '',
     location: {
-      longitude: '',
-      latitude: '',
+      longitude: '-73.9264744',
+      latitude: '40.766257',
       streetAddressLineOne: '2322 30th Rd',
       streetAddressLineTwo: 'Apt 9F',
       city: 'Astoria',
@@ -115,12 +119,13 @@ export const apartments = [
     }
   },
   {
+    id: uuid(),
     title: 'Knitters Haven',
     description: '',
     location: {
-      longitude: '',
-      latitude: '',
-      streetAddressLineOne: '2535 36th Street',
+      longitude: '-73.9265166',
+      latitude: '40.7678631',
+      streetAddressLineOne: '3094 Crescent St',
       streetAddressLineTwo: 'Apt 1F',
       city: 'Astoria',
       state: 'NY',
@@ -153,11 +158,12 @@ export const apartments = [
     }
   },
   {
+    id: uuid(),
     title: 'Artist Loft',
     description: '',
     location: {
-      longitude: '',
-      latitude: '',
+      longitude: '-73.9265166',
+      latitude: '40.7678631',
       streetAddressLineOne: '56 Richardson St',
       streetAddressLineTwo: 'Apt 2A',
       city: 'Brooklyn',
