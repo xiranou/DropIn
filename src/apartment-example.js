@@ -1,3 +1,5 @@
+import * as uuid from "uuid/v4";
+
 export const apartment = {
   title: 'B&B La Primula - "Yellow Room"',
   description: '',
@@ -39,6 +41,7 @@ export const apartment = {
 
 export const apartments = [
   {
+    id: uuid(),
     title: 'Opera Singer`s Dream Studio',
     description: '',
     location: {
@@ -77,6 +80,7 @@ export const apartments = [
     }
   },
   {
+    id: uuid(),
     title: 'Quaint Astoria Brownstone',
     description: '',
     location: {
@@ -115,6 +119,7 @@ export const apartments = [
     }
   },
   {
+    id: uuid(),
     title: 'Knitters Haven',
     description: '',
     location: {
@@ -153,11 +158,12 @@ export const apartments = [
     }
   },
   {
+    id: uuid(),
     title: 'Artist Loft',
     description: '',
     location: {
-      longitude: '',
-      latitude: '',
+      longitude: '-73.9265166',
+      latitude: '40.7678631',
       streetAddressLineOne: '56 Richardson St',
       streetAddressLineTwo: 'Apt 2A',
       city: 'Brooklyn',

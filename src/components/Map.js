@@ -53,17 +53,17 @@ const GoogleMap = ({ children, ...props }) => {
         }}
       >
         {
-          props.apartments.map((apt, index) => {
-            const id = `apt-marker-${index}`;
-            const clicked = clickedMarker === id;
+          props.apartments.map((apt) => {
+            const clicked = clickedMarker === apt.id;
+
             return (
               <MapMarker
-                key={id}
+                key={apt.id}
                 lat={apt.location.latitude}
                 lng={apt.location.longitude}
                 title={apt.title}
                 clicked={clicked}
-                onHover={() => console.log('Hover: ', id)}
+                onHover={() => console.log('Hover: ', apt.id)}
               />
             )
           })

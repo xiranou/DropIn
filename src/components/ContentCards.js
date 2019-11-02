@@ -2,7 +2,7 @@ import React from 'react';
 import CenteredColumns from './CenteredColumns';
 import Slider from 'react-slick';
 import './ContentCards.scss';
-import { Link, useRouter } from './../util/router.js';
+import { Link } from './../util/router.js';
 
 const settings = {
   infinite: true,
