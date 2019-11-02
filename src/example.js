@@ -18,7 +18,7 @@ export const classes = [
       state: 'NY',
       zipcode: '11103'
     },
-    images: ['/apt1.jpg', '/apt2.jpg'],
+    images: ['/opera.jpg', '/apt2.jpg'],
     amentites: ['Piano'],
     price: '50',
     classDates: [

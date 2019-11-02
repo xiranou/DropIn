@@ -1,7 +1,9 @@
 import React from 'react';
 import LandingHeroSection from './../components/LandingHeroSection';
 import FeaturesSection from './../components/FeaturesSection';
+import FeaturedClasses from './../components/FeaturedClasses';
 import { useRouter } from './../util/router.js';
+import { classes } from './../example';
 
 function IndexPage(props) {
   const router = useRouter();
@@ -19,6 +21,13 @@ function IndexPage(props) {
         }}
       />
       <FeaturesSection
+        color="white"
+        size="medium"
+        title="Here's what people are saying"
+        subtitle=""
+      />
+      <FeaturedClasses
+        items={classes}
         color="white"
         size="medium"
         title="Here's what people are saying"

@@ -1,8 +1,8 @@
-import React from "react";
-import CenteredColumns from "./CenteredColumns";
-import Slider from "react-slick";
-import "./ContentCards.scss";
-import { Link } from "./../util/router.js";
+import React from 'react';
+import CenteredColumns from './CenteredColumns';
+import Slider from 'react-slick';
+import './ContentCards.scss';
+import { Link } from './../util/router.js';
 
 const settings = {
   infinite: true,
@@ -11,47 +11,36 @@ const settings = {
   slidesToScroll: 1
 };
 
-const renderImages = (images, id) => {
-  return images.map(url => {
-    return (
-      <Link to={`/classes/${id}`} key={`class-image-${id}`}>
-        <img src={url} alt={url} />
-      </Link>
-    );
-  });
-};
-
 function ContentCard({ classDetail }) {
   return (
-    <div style={{ position: "absolute" }}>
-      <div data-test="mookie">
-        <div className="card is-flex">
-          <div className="card-image">
-            <Slider {...settings}>
-              {renderImages(classDetail.images, classDetail.id)}
-            </Slider>
-          </div>
-          <div className="card-content">
-            <div className="content">
-              <span class="tag is-primary">
-                {classDetail.owner.skillset[0]}
-              </span>
-              <h4>{classDetail.title}</h4>
-              <p>{classDetail.description}</p>
-              <span
-                className="has-text-weight-heavy"
-                style={{ marginRight: "10px" }}
-              >
-                ${classDetail.price}/hr
-              </span>
-              <span style={{ marginRight: "10px" }}>
-                {classDetail.bedrooms} Bedrooms
-              </span>
-              <span style={{ marginRight: "10px" }}>
-                {classDetail.bathrooms} Bathrooms
-              </span>
-            </div>
-          </div>
+    <div className="column">
+      <div class="card">
+        <div class="card-image">
+          <Link
+            to={`/classes/${classDetail.id}`}
+            key={`class-image-${classDetail.id}`}
+          >
+            <img src={classDetail.images[0]} alt={classDetail.images[0]} />
+          </Link>
+        </div>
+        <div className="card-content">
+          <span class="tag is-primary">{classDetail.owner.skillset[0]}</span>
+          <span class="tag is-secondary">8 Credits</span>
+          <h4>{classDetail.title}</h4>
+          <p
+            style={{
+              display: '-webkit-box',
+              webkitLineClamp: '3',
+              webkitBoxOrient: 'vertical',
+              overflow: 'hidden'
+            }}
+          >
+            {classDetail.description}
+          </p>
+          <span
+            className="has-text-weight-heavy"
+            style={{ marginRight: '10px' }}
+          ></span>
         </div>
       </div>
     </div>
