@@ -1,21 +1,21 @@
-import React from "react";
-import HeroSection from "./../components/HeroSection";
-import FeaturesSection from "./../components/FeaturesSection";
-import { useRouter } from "./../util/router.js";
+import React from 'react';
+import LandingHeroSection from './../components/LandingHeroSection';
+import FeaturesSection from './../components/FeaturesSection';
+import { useRouter } from './../util/router.js';
 
 function IndexPage(props) {
   const router = useRouter();
 
   return (
     <>
-      <HeroSection
+      <LandingHeroSection
         color="primary"
         size="large"
-        title="Your landing page title here"
-        subtitle="This landing page is perfect for showing off your awesome product and driving people to sign up for a paid plan."
-        buttonText="Start Free Trial"
+        title="Every class with one pass"
+        subtitle="Committing is hard — so don’t. Work out at any gym, try any workout and do it all with one app. Try ClassPass for free."
+        buttonText="Try for free"
         buttonOnClick={() => {
-          router.push("/pricing");
+          router.push('/classes');
         }}
       />
       <FeaturesSection

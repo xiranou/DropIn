@@ -12,3 +12,9 @@ ReactDom.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+window.onscroll = () => {
+  const nav = document.querySelector('#navbar');
+  if (window.scrollY <= 10) nav.classList.remove('scroll');
+  else nav.classList.add('scroll');
+};

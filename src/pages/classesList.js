@@ -1,17 +1,8 @@
-import React, { Component } from "react";
-import ContentCardsSection from "../components/ContentCardsSection";
-import Map from "../components/Map";
-import { classes } from "../example";
-
-const filtersList = [
-  "Classical",
-  "Sports",
-  "Singing",
-  "Dancing",
-  "Cooking",
-  "Designer",
-  "Photo Shoots"
-];
+import React from 'react';
+import ContentCardsSection from '../components/ContentCardsSection';
+import Map from '../components/Map';
+import { classes } from '../example';
+import { tags } from '../util/tags';
 
 const ClassesPage = () => {
   const [activeFilters, setActiveFilters] = React.useState([]);
@@ -35,12 +26,12 @@ const ClassesPage = () => {
   };
 
   const isActiveClass = filter =>
-    activeFilters.includes(filter) ? "is-info" : "is-light";
+    activeFilters.includes(filter) ? 'is-info' : 'is-light';
 
   return (
     <div className="columns">
       <div className="column is-half-desktop">
-        {filtersList.map((filter, index) => (
+        {tags.map((filter, index) => (
           <span
             key={`filter-${index}`}
             onClick={() => onClickFilter(filter)}

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import "./Card.scss";
+import './Card.scss';
 
-import { Link } from "./../util/router.js";
-import Slider from "react-slick";
+import { Link } from './../util/router.js';
+import Slider from 'react-slick';
 
 const settings = {
   infinite: true,
@@ -24,7 +24,7 @@ const renderImages = (images, id) => {
 
 const Card = props => {
   return (
-    <div className={`column is-full ${props.isFocused ? "is-focused" : ""}`}>
+    <div className={`column is-full ${props.isFocused ? 'is-focused' : ''}`}>
       <div className="ContentCards__card card is-flex">
         <div className="card-content">
           <div className="columns">
@@ -35,24 +35,24 @@ const Card = props => {
                 </Link>
                 <p
                   style={{
-                    display: "-webkit-box",
-                    webkitLineClamp: "3",
-                    webkitBoxOrient: "vertical",
-                    overflow: "hidden"
+                    display: '-webkit-box',
+                    webkitLineClamp: '3',
+                    webkitBoxOrient: 'vertical',
+                    overflow: 'hidden'
                   }}
                 >
                   {props.classDetails.description}
                 </p>
                 <span
                   className="has-text-weight-heavy"
-                  style={{ marginRight: "10px" }}
+                  style={{ marginRight: '10px' }}
                 >
                   ${props.classDetails.price}/hr
                 </span>
-                <span style={{ marginRight: "10px" }}>
+                <span style={{ marginRight: '10px' }}>
                   {props.classDetails.bedrooms} Bedrooms
                 </span>
-                <span style={{ marginRight: "10px" }}>
+                <span style={{ marginRight: '10px' }}>
                   {props.classDetails.bathrooms} Bathrooms
                 </span>
                 <span class="tag is-primary">
