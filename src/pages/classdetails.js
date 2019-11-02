@@ -2,14 +2,21 @@ import React from 'react';
 import Divider from '../components/Divider';
 import Button from '../components/Button';
 import Map from '../components/Map';
+import Spinner from '../components/Spinner';
 
 import { useParams } from '../util/router.js';
-import { classes } from '../example';
+import { useClassList } from '../util/requests';
 
 function ClassDetailsPage(props) {
   const { id } = useParams();
-  const classDetails = classes[id];
-  return (
+  const [classList, isFetched] = useClassList();
+  const classDetails = classList.find(({ id: classId }) => classId === id) || {
+    images: []
+  };
+
+  return !isFetched ? (
+    <Spinner />
+  ) : (
     <div className="SectionComponent section container">
       <div className="columns">
         <div className="column is-three-quarters">
