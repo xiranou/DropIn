@@ -72,9 +72,6 @@ function ClassDetailsPage() {
             <h1 className="title is-size-5" style={{ marginBottom: "1rem" }}>
               {classDetails.title}
             </h1>
-            {/* <div style={{ marginBottom: '1rem' }}>
-              Amentities: {classDetails.amentites[0]}
-            </div> */}
             <div style={{ marginBottom: "1rem" }}>
               <p>
                 Teacher:{" "}

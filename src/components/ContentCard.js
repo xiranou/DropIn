@@ -28,7 +28,16 @@ function ContentCard({ classDetail }) {
             {/* {dayjs(classDetail.classDates[0].start).format('H:mm')} */}
           </span>
 
-          <h4 className="has-text-weight-semibold	is-family-primary">
+          <h4
+            className="has-text-weight-semibold	is-family-primary"
+            style={{
+              display: "-webkit-box",
+              WebkitLineClamp: "1",
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+              marginTop: "0.5rem"
+            }}
+          >
             {classDetail.title}
           </h4>
           <p
