@@ -1,5 +1,4 @@
 import React from "react";
-import Divider from "../components/Divider";
 import Button from "../components/Button";
 import Map from "../components/Map";
 import Spinner from "../components/Spinner";
@@ -10,6 +9,7 @@ import { useClassList } from "../util/requests";
 function ClassDetailsPage(props) {
   const { id } = useParams();
   const [classList, isFetched] = useClassList();
+  const [isBooked, setBookStatus] = React.useState(false);
   const classDetails = classList.find(({ id: classId }) => classId === id) || {
     images: []
   };
@@ -32,7 +32,6 @@ function ClassDetailsPage(props) {
           <div className="box">
             <section>
               <h1 className="title">{classDetails.title}</h1>
-              <Button>Book Now</Button>
               <p>Class taught by:</p>
               <figure className="image is-128x128 is-rounded">
                 <img
@@ -97,14 +96,34 @@ function ClassDetailsPage(props) {
                 lng: classDetails.location.longitude
               }}
             />
-            <h1
-              className="title is-size-5 is-marginless"
-              style={{ marginTop: "2.15rem" }}
-            >
+            <h1 className="title is-size-5" style={{ marginBottom: "1rem" }}>
               About the Space
             </h1>
-            <div>Amentities: {classDetails.amentites[0]}</div>
-            <div>{classDetails.description}</div>
+            <div style={{ marginBottom: "1rem" }}>
+              Amentities: {classDetails.amentites[0]}
+            </div>
+            <div style={{ marginBottom: "1rem" }}>
+              {classDetails.description}
+            </div>
+            <section
+              className="section is-small"
+              style={{
+                padding: "1rem",
+                justifyContent: "center",
+                display: "flex",
+                alignItems: "center"
+              }}
+            >
+              <button
+                class={`button is-info ${
+                  isBooked ? "is-success" : "is-outlined"
+                }`}
+                disabled={isBooked}
+                onClick={() => setBookStatus(booked => !booked)}
+              >
+                {isBooked ? "Booked" : "Book Now"}
+              </button>
+            </section>
           </div>
         </div>
       </div>
