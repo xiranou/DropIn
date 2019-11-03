@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import NavbarContainer from './NavbarContainer';
-import { Link } from './../util/router.js';
+import Button from './Button';
+import { Link, useRouter } from './../util/router.js';
 import { useAuth } from './../util/auth.js';
 
 function Navbar(props) {
   const auth = useAuth();
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -27,33 +29,40 @@ function Navbar(props) {
         </div>
         <div className={'navbar-menu' + (menuOpen ? ' is-active' : '')}>
           <div className="navbar-end">
+            <Link className="navbar-item" to="/pricing">
+              Pricing
+            </Link>
+
             {auth.user && (
-              <div className="navbar-item has-dropdown is-hoverable">
-                <Link className="navbar-link" to="/">
-                  Account
-                </Link>
-                <div className="navbar-dropdown is-boxed">
-                  <Link className="navbar-item" to="/dashboard">
-                    Dashboard
-                  </Link>
-                  <Link
-                    className="navbar-item"
-                    to="/signout"
-                    onClick={e => {
-                      e.preventDefault();
-                      auth.signout();
-                    }}
-                  >
-                    Sign out
-                  </Link>
-                </div>
-              </div>
+              <Link
+                className="navbar-item"
+                to="/signout"
+                onClick={e => {
+                  e.preventDefault();
+                  auth.signout();
+                }}
+              >
+                Sign out
+              </Link>
             )}
 
             {!auth.user && (
-              <Link className="navbar-item" to="/signin">
-                Sign in
-              </Link>
+              <>
+                <Link className="navbar-item" to="/signin">
+                  Sign in
+                </Link>
+                <div className="navbar-item">
+                  <Button
+                    parentColor={props.color}
+                    size="normal"
+                    onClick={() => {
+                      router.push('/signup');
+                    }}
+                  >
+                    Sign Up
+                  </Button>
+                </div>
+              </>
             )}
           </div>
         </div>

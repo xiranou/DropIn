@@ -25,7 +25,7 @@ function ContentCard({ classDetail }) {
         </div>
         <div className="card-content">
           <span class="tag is-primary">{classDetail.owner.skillset[0]}</span>
-          <span class="tag is-secondary">8 Credits</span>
+          <span class="tag is-secondary is-pulled-right">8 Credits</span>
           <h4>{classDetail.title}</h4>
           <p
             style={{

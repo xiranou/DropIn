@@ -22,7 +22,16 @@ const renderImages = (images, id) => {
   });
 };
 
+const renderTags = tags => {
+  return tags.map(tag => (
+    <span style={{ marginRight: '10px' }} class="tag is-info">
+      {tag}
+    </span>
+  ));
+};
+
 const Card = props => {
+  const { classDetails } = props;
   return (
     <div className={`column is-full ${props.isFocused ? 'is-focused' : ''}`}>
       <div className="ContentCards__card card is-flex">
@@ -30,8 +39,8 @@ const Card = props => {
           <div className="columns">
             <div className="column is-three-fifths">
               <div className="content">
-                <Link to={`/classes/${props.classDetails.id}`}>
-                  <h4>{props.classDetails.title}</h4>
+                <Link to={`/classes/${classDetails.id}`}>
+                  <h4>{classDetails.title}</h4>
                 </Link>
                 <p
                   style={{
@@ -41,32 +50,16 @@ const Card = props => {
                     overflow: 'hidden'
                   }}
                 >
-                  {props.classDetails.description}
+                  {classDetails.description}
                 </p>
-                <span
-                  className="has-text-weight-heavy"
-                  style={{ marginRight: '10px' }}
-                >
-                  ${props.classDetails.price}/hr
-                </span>
-                <span style={{ marginRight: '10px' }}>
-                  {props.classDetails.bedrooms} Bedrooms
-                </span>
-                <span style={{ marginRight: '10px' }}>
-                  {props.classDetails.bathrooms} Bathrooms
-                </span>
-                <span class="tag is-primary">
-                  {props.classDetails.owner.skillset[0]}
-                </span>
+
+                {renderTags(classDetails.owner.skillset)}
               </div>
             </div>
             <div className="column is-two-fifths">
               <div className="card-image">
                 <Slider {...settings}>
-                  {renderImages(
-                    props.classDetails.images,
-                    props.classDetails.id
-                  )}
+                  {renderImages(classDetails.images, classDetails.id)}
                 </Slider>
               </div>
             </div>
