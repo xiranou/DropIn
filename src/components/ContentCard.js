@@ -1,8 +1,8 @@
-import React from "react";
-import dayjs from "dayjs";
+import React from 'react';
+import dayjs from 'dayjs';
 
-import "./ContentCards.scss";
-import { Link } from "./../util/router.js";
+import './ContentCards.scss';
+import { Link } from './../util/router.js';
 
 function ContentCard({ classDetail }) {
   return (
@@ -17,32 +17,34 @@ function ContentCard({ classDetail }) {
           </Link>
         </div>
         <div className="card-content">
-          <span class="tag is-info">{classDetail.owner.skillset[0]}</span>
+          <span class="tag is-info ">{classDetail.owner.skillset[0]}</span>
+          <span class="tag is-light is-pulled-right">8</span>
+          <span class="tag is-info is-light is-pulled-right">
+            7:30PM
+            {/* {dayjs(classDetail.classDates[0].start).format('H:mm')} */}
+          </span>
+
           <h4 className="has-text-weight-semibold	is-family-primary">
             {classDetail.title}
           </h4>
-          <p class="tag is-secondary">
-            8 credits{" | "}
-            {dayjs(classDetail.classDates[0].start).format("ddd H:mm A")}
-          </p>
           <p
             className="is-family-seconday"
             style={{
-              display: "-webkit-box",
-              WebkitLineClamp: "3",
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
-              margin: "0.5rem 0"
+              display: '-webkit-box',
+              WebkitLineClamp: '3',
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              margin: '0.5rem 0'
             }}
           >
             {classDetail.description}
           </p>
-          <p
+          <span
             className="is-italic has-text-weight-light"
-            style={{ marginRight: "10px" }}
+            style={{ marginRight: '10px' }}
           >
             Ratings: {classDetail.ratings[0].score}/5
-          </p>
+          </span>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
-import React from "react";
-import LandingHeroSection from "./../components/LandingHeroSection";
-import FeaturesSection from "./../components/FeaturesSection";
-import FeaturedClasses from "./../components/FeaturedClasses";
-import { useRouter } from "./../util/router.js";
-import { useClassList } from "../util/requests";
+import React from 'react';
+import LandingHeroSection from './../components/LandingHeroSection';
+import FeaturesSection from './../components/FeaturesSection';
+import FeaturedClasses from './../components/FeaturedClasses';
+import { useRouter } from './../util/router.js';
+import { useClassList } from '../util/requests';
 
 function IndexPage() {
   const router = useRouter();
@@ -11,13 +11,13 @@ function IndexPage() {
   return (
     <>
       <LandingHeroSection
-        color="primary"
+        color="primary is-outlined"
         size="large"
         title="Every class with one pass"
-        subtitle="Committing is hard — so don’t. Work out at any gym, try any workout and do it all with one app. Try ClassPass for free."
+        subtitle="Learning on your own is hard — so don’t.  Drop into any class taught by people just like you who want to share their knowledge.  Try DropIn for free."
         buttonText="Try for free"
         buttonOnClick={() => {
-          router.push("/classes");
+          router.push('/classes');
         }}
       />
       <FeaturesSection
