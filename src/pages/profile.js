@@ -18,7 +18,7 @@ function ProfilePage(props) {
                 }
                 size={"64"}
               />
-              <h1 className="title">Becky Fabis</h1>
+              <h1 className="title">Amanda Fabis</h1>
               <p>10 of 72 credits remaining</p>
               <p>22 days left in current cycle</p>
               <button
