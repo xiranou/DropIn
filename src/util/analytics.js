@@ -1,5 +1,5 @@
 import Analytics from "analytics";
-import googleAnalyticsPlugin from "@analytics/google-analytics";
+// import googleAnalyticsPlugin from "@analytics/google-analytics";
 import { history } from "./router.js";
 
 // Initialize analytics and plugins

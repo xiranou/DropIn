@@ -1,12 +1,11 @@
 import React from "react";
-import Button from "../components/Button";
 import Map from "../components/Map";
 import Spinner from "../components/Spinner";
 
 import { useParams } from "../util/router.js";
 import { useClassList } from "../util/requests";
 
-function ClassDetailsPage(props) {
+function ClassDetailsPage() {
   const { id } = useParams();
   const [classList, isFetched] = useClassList();
   const [isBooked, setBookStatus] = React.useState(false);
@@ -54,20 +53,13 @@ function ClassDetailsPage(props) {
 
           <div className="box">
             <section>
-              <div>{classDetails.owner.name}</div>
-              <div>{classDetails.owner.name}</div>
-            </section>
-          </div>
-
-          <div className="box">
-            <section>
               <h1 className="title">Reviews</h1>
               <div>
                 {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{" "}
                 {classDetails.ratings.length} rating(s)
               </div>
               <div>DropIns say: {classDetails.ratings[0].review}</div>
-              <a>Read all Reviews</a>
+              <a href="/#">Read all Reviews</a>
             </section>
           </div>
 

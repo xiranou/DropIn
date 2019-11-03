@@ -1,15 +1,6 @@
-import React from 'react';
-import CenteredColumns from './CenteredColumns';
-import Slider from 'react-slick';
-import './ContentCards.scss';
-import { Link } from './../util/router.js';
-
-const settings = {
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-};
+import React from "react";
+import "./ContentCards.scss";
+import { Link } from "./../util/router.js";
 
 function ContentCard({ classDetail }) {
   return (
@@ -29,17 +20,17 @@ function ContentCard({ classDetail }) {
           <h4>{classDetail.title}</h4>
           <p
             style={{
-              display: '-webkit-box',
-              webkitLineClamp: '3',
-              webkitBoxOrient: 'vertical',
-              overflow: 'hidden'
+              display: "-webkit-box",
+              webkitLineClamp: "3",
+              webkitBoxOrient: "vertical",
+              overflow: "hidden"
             }}
           >
             {classDetail.description}
           </p>
           <span
             className="has-text-weight-heavy"
-            style={{ marginRight: '10px' }}
+            style={{ marginRight: "10px" }}
           ></span>
         </div>
       </div>

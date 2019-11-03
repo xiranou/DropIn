@@ -21,7 +21,6 @@ This project uses the following libraries and services:
 - Framework - [Create React App](https://create-react-app.dev) with React Router
 - Styling - [Bulma](https://bulma.io) with custom SASS styles
 - Authentication - [Firebase Auth](https://firebase.google.com/products/auth)
-- Analytics - [Google Analytics](https://googleanalytics.com)
 
 ## 📚 Guide
 
