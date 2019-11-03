@@ -1,11 +1,11 @@
-import React from 'react';
-import Divider from '../components/Divider';
-import Button from '../components/Button';
-import Map from '../components/Map';
-import Spinner from '../components/Spinner';
+import React from "react";
+import Divider from "../components/Divider";
+import Button from "../components/Button";
+import Map from "../components/Map";
+import Spinner from "../components/Spinner";
 
-import { useParams } from '../util/router.js';
-import { useClassList } from '../util/requests';
+import { useParams } from "../util/router.js";
+import { useClassList } from "../util/requests";
 
 function ClassDetailsPage(props) {
   const { id } = useParams();
@@ -20,16 +20,16 @@ function ClassDetailsPage(props) {
     <div className="SectionComponent section container">
       <div className="columns">
         <div className="column is-three-quarters">
-          <section>
+          <div className="box is-paddingless">
             <img
               className="hero full-width"
-              style={{ width: '100%' }}
+              style={{ width: "100%" }}
               src={classDetails.images[0]}
               alt="class-detail.hero"
             />
-          </section>
+          </div>
 
-          <div className="card">
+          <div className="box">
             <section>
               <h1 className="title">{classDetails.title}</h1>
               <Button>Book Now</Button>
@@ -44,7 +44,7 @@ function ClassDetailsPage(props) {
             </section>
           </div>
 
-          <div className="card">
+          <div className="box">
             <section>
               <div>Saturday, Nov 2</div>
               <div>8:30am - 9:30am</div>
@@ -53,18 +53,18 @@ function ClassDetailsPage(props) {
             </section>
           </div>
 
-          <div className="card">
+          <div className="box">
             <section>
               <div>{classDetails.owner.name}</div>
               <div>{classDetails.owner.name}</div>
             </section>
           </div>
 
-          <div className="card">
+          <div className="box">
             <section>
               <h1 className="title">Reviews</h1>
               <div>
-                {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{' '}
+                {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{" "}
                 {classDetails.ratings.length} rating(s)
               </div>
               <div>DropIns say: {classDetails.ratings[0].review}</div>
@@ -72,35 +72,40 @@ function ClassDetailsPage(props) {
             </section>
           </div>
 
-          <div className="card">
+          <div className="box">
             <section>
               <h1 className="title">About the Class</h1>
               <div>
-                Activity: {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{' '}
+                Activity: {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{" "}
               </div>
               <div>Level: All Levels</div>
               <div>{classDetails.description}</div>
             </section>
           </div>
-
-          <div className="card">
-            <section>
-              <h1 className="title">About the Space</h1>
-              <div>Amentities: {classDetails.amentites[0]}</div>
-              <div>{classDetails.description}</div>
-              <Map
-                classes={[classDetails]}
-                zoom={15}
-                center={{
-                  lat: classDetails.location.latitude,
-                  lng: classDetails.location.longitude
-                }}
-              />
-            </section>
-          </div>
         </div>
         <div className="column is-one-quarter">
-          <div className="card"></div>
+          <div
+            className="card card-content"
+            style={{ position: "sticky", top: "4px" }}
+          >
+            <Map
+              height="258px"
+              classes={[classDetails]}
+              zoom={15}
+              center={{
+                lat: classDetails.location.latitude,
+                lng: classDetails.location.longitude
+              }}
+            />
+            <h1
+              className="title is-size-5 is-marginless"
+              style={{ marginTop: "2.15rem" }}
+            >
+              About the Space
+            </h1>
+            <div>Amentities: {classDetails.amentites[0]}</div>
+            <div>{classDetails.description}</div>
+          </div>
         </div>
       </div>
     </div>
