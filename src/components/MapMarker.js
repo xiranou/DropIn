@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import MarkerBlue from "./MarkerBlue";
-import ContentCard from "./ContentCard";
+import MarkerBlue from './MarkerBlue';
+import ContentCard from './ContentCard';
 
 const MapMarker = props => {
   React.useEffect(() => {
