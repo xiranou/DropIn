@@ -1,13 +1,13 @@
-import React from 'react';
-import LandingHeroSection from './../components/LandingHeroSection';
-import FeaturesSection from './../components/FeaturesSection';
-import FeaturedClasses from './../components/FeaturedClasses';
-import { useRouter } from './../util/router.js';
-import { classes } from './../example';
+import React from "react";
+import LandingHeroSection from "./../components/LandingHeroSection";
+import FeaturesSection from "./../components/FeaturesSection";
+import FeaturedClasses from "./../components/FeaturedClasses";
+import { useRouter } from "./../util/router.js";
+import { useClassList } from "../util/requests";
 
 function IndexPage(props) {
   const router = useRouter();
-
+  const [classList] = useClassList();
   return (
     <>
       <LandingHeroSection
@@ -17,7 +17,7 @@ function IndexPage(props) {
         subtitle="Committing is hard — so don’t. Work out at any gym, try any workout and do it all with one app. Try ClassPass for free."
         buttonText="Try for free"
         buttonOnClick={() => {
-          router.push('/classes');
+          router.push("/classes");
         }}
       />
       <FeaturesSection
@@ -27,7 +27,7 @@ function IndexPage(props) {
         subtitle=""
       />
       <FeaturedClasses
-        items={classes}
+        items={classList.slice(0, 4)}
         color="white"
         size="medium"
         title="Here's what people are saying"
