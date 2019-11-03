@@ -1,10 +1,10 @@
-import React from 'react';
-import Map from '../components/Map';
-import Spinner from '../components/Spinner';
-import Avatar from '../components/Avatar';
+import React from "react";
+import Map from "../components/Map";
+import Spinner from "../components/Spinner";
+import Avatar from "../components/Avatar";
 
-import { useParams } from '../util/router.js';
-import { useClassList } from '../util/requests';
+import { useParams } from "../util/router.js";
+import { useClassList } from "../util/requests";
 
 function ClassDetailsPage() {
   const { id } = useParams();
@@ -23,7 +23,7 @@ function ClassDetailsPage() {
           <div className="box is-paddingless">
             <img
               className="hero full-width"
-              style={{ width: '100%' }}
+              style={{ width: "100%" }}
               src={classDetails.images[0]}
               alt="class-detail.hero"
             />
@@ -38,10 +38,7 @@ function ClassDetailsPage() {
           <div className="box">
             <section>
               <h1 className="title">About the Class</h1>
-              <div>
-                Activity: {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{' '}
-              </div>
-              <div>Level: All Levels</div>
+              <div className="has-text-weight-semibold">Level: All Levels</div>
               <div>{classDetails.description}</div>
             </section>
           </div>
@@ -50,7 +47,7 @@ function ClassDetailsPage() {
             <section>
               <h1 className="title">Reviews</h1>
               <div>
-                {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{' '}
+                {classDetails.ratings[0].score}/5 ⭐⭐⭐⭐ from{" "}
                 {classDetails.ratings.length} rating(s)
               </div>
               <div>DropIns say: {classDetails.ratings[0].review}</div>
@@ -61,7 +58,7 @@ function ClassDetailsPage() {
         <div className="column is-one-quarter">
           <div
             className="card card-content has-text-centered"
-            style={{ position: 'sticky', top: '4px' }}
+            style={{ position: "sticky", top: "4px" }}
           >
             <Map
               height="258px"
@@ -72,24 +69,24 @@ function ClassDetailsPage() {
                 lng: classDetails.location.longitude
               }}
             />
-            <h1 className="title is-size-5" style={{ marginBottom: '1rem' }}>
+            <h1 className="title is-size-5" style={{ marginBottom: "1rem" }}>
               {classDetails.title}
             </h1>
             {/* <div style={{ marginBottom: '1rem' }}>
               Amentities: {classDetails.amentites[0]}
             </div> */}
-            <div style={{ marginBottom: '1rem' }}>
+            <div style={{ marginBottom: "1rem" }}>
               <p>
-                Teacher:{' '}
+                Teacher:{" "}
                 <span className="has-text-weight-medium">
                   {classDetails.owner.name}
                 </span>
               </p>
               <div>Saturday, Nov 2</div>
               <div>8:30am - 9:30am</div>
-              <div style={{ margin: '0 auto' }}>
+              <div style={{ margin: "0 auto" }}>
                 <Avatar
-                  style={{ margin: '0 auto' }}
+                  style={{ margin: "0 auto" }}
                   size="128"
                   src={classDetails.owner.image}
                   alt="class-detail.owner"
@@ -99,20 +96,20 @@ function ClassDetailsPage() {
             <section
               className="section is-small"
               style={{
-                padding: '1rem',
-                justifyContent: 'center',
-                display: 'flex',
-                alignItems: 'center'
+                padding: "1rem",
+                justifyContent: "center",
+                display: "flex",
+                alignItems: "center"
               }}
             >
               <button
                 class={`button is-info ${
-                  isBooked ? 'is-success' : 'is-outlined'
+                  isBooked ? "is-success" : "is-outlined"
                 }`}
                 disabled={isBooked}
                 onClick={() => setBookStatus(booked => !booked)}
               >
-                {isBooked ? 'Booked' : 'Book Now'}
+                {isBooked ? "Booked" : "Book Now"}
               </button>
             </section>
           </div>
