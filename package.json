@@ -2,6 +2,9 @@
   "name": "dropin",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "^10.17.0"
+  },
   "dependencies": {
     "@analytics/google-analytics": "0.2.0",
     "@google/maps": "^1.0.2",
