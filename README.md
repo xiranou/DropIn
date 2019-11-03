@@ -9,7 +9,7 @@ npm install
 Run the development server
 
 ```
-npm run start
+npm run dev
 ```
 
 When the above command completes you'll be able to view your website at `http://localhost:3000`
@@ -22,7 +22,6 @@ This project uses the following libraries and services:
 - Styling - [Bulma](https://bulma.io) with custom SASS styles
 - Authentication - [Firebase Auth](https://firebase.google.com/products/auth)
 - Analytics - [Google Analytics](https://googleanalytics.com)
-- Hosting - [ZEIT Now](https://zeit.co)
 
 ## 📚 Guide
 
@@ -94,26 +93,6 @@ function MyComponent(){
   );
 }
 ````
-
-  </p>
-</details>
-
-<details>
-  <summary><b>Deployment</b></summary>
-  <p>
-  Install the ZEIT Now CLI
-
-```
-npm install -g now
-```
-
-Then run this command in your project directory to deploy to ZEIT Now
-
-```
-now
-```
-
-See the <a target="_blank" href="https://zeit.co/docs">ZEIT docs</a> for more details.
 
   </p>
 </details>
