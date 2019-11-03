@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const MakerBlue = () => (
   <svg width="24" height="22" xmlns="http://www.w3.org/2000/svg">
-    <g fill-rule="nonzero" fill="none">
+    <g fillRule="nonzero" fill="none">
       <path
         d="M13.216 20.725L23.768 2.074l-.002-.006a1.177 1.177 0 00-.906-1.772l-.001-.003h-.015a1.207 1.207 0 00-.21 0L1.355.332A1.202 1.202 0 00.676.49a1.187 1.187 0 00-.441 1.626l10.863 18.69a1.203 1.203 0 002.118-.08z"
         fill="#000"

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import './Card.scss';
+import "./Card.scss";
 
-import { Link } from './../util/router.js';
-import Slider from 'react-slick';
+import { Link } from "./../util/router.js";
+import Slider from "react-slick";
 
 const settings = {
   infinite: true,
@@ -23,8 +23,12 @@ const renderImages = (images, id) => {
 };
 
 const renderTags = tags => {
-  return tags.map(tag => (
-    <span style={{ marginRight: '10px' }} class="tag is-info">
+  return tags.map((tag, index) => (
+    <span
+      style={{ marginRight: "10px" }}
+      className="tag is-info"
+      key={`tag-${index}`}
+    >
       {tag}
     </span>
   ));
@@ -33,7 +37,7 @@ const renderTags = tags => {
 const Card = props => {
   const { classDetails } = props;
   return (
-    <div className={`column is-full ${props.isFocused ? 'is-focused' : ''}`}>
+    <div className={`column is-full ${props.isFocused ? "is-focused" : ""}`}>
       <div className="ContentCards__card card is-flex">
         <div className="card-content">
           <div className="columns">
@@ -44,10 +48,10 @@ const Card = props => {
                 </Link>
                 <p
                   style={{
-                    display: '-webkit-box',
-                    WebkitLineClamp: '3',
-                    WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden'
+                    display: "-webkit-box",
+                    WebkitLineClamp: "3",
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden"
                   }}
                 >
                   {classDetails.description}

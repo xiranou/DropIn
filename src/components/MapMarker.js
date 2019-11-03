@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import MarkerBlue from './MarkerBlue';
-import ContentCard from './ContentCard';
+import MarkerBlue from "./MarkerBlue";
 
 const MapMarker = props => {
   React.useEffect(() => {
@@ -12,17 +11,13 @@ const MapMarker = props => {
     }
   }, [props, props.$hover]);
 
-  if (props.clicked) {
-    return <ContentCard classDetail={props.classDetail} />;
-  } else {
-    return (
-      <MarkerBlue
-        lat={props.lat}
-        lng={props.lng}
-        text={props.classDetail.title}
-      />
-    );
-  }
+  return (
+    <MarkerBlue
+      lat={props.lat}
+      lng={props.lng}
+      text={props.classDetail.title}
+    />
+  );
 };
 
 export default MapMarker;

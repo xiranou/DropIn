@@ -1,7 +1,7 @@
-import React from 'react';
-import Section from './Section';
-import { Link } from './../util/router.js';
-import './Footer.scss';
+import React from "react";
+import Section from "./Section";
+import { Link } from "./../util/router.js";
+import "./Footer.scss";
 
 function Footer(props) {
   return (

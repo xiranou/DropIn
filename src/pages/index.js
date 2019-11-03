@@ -5,7 +5,7 @@ import FeaturedClasses from "./../components/FeaturedClasses";
 import { useRouter } from "./../util/router.js";
 import { useClassList } from "../util/requests";
 
-function IndexPage(props) {
+function IndexPage() {
   const router = useRouter();
   const [classList] = useClassList();
   return (

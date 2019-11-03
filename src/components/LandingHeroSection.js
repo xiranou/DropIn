@@ -7,11 +7,11 @@ import "./LandingHeroSection.scss";
 function LandingHeroSection(props) {
   return (
     <Section
-      class="hero is-fullheight-with-navbar"
+      className="hero is-fullheight-with-navbar"
       color={props.color}
       size={props.size}
     >
-      <video id="myVideo" autoPlay="true" muted="true" loop="true">
+      <video id="myVideo" autoPlay={true} muted={true} loop={true}>
         <source src="/cooking-demo.mp4" type="video/mp4" />
       </video>
       <div

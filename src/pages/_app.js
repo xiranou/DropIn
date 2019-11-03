@@ -1,23 +1,23 @@
-import React from 'react';
-import Navbar from './../components/Navbar';
-import IndexPage from './index';
-import AboutPage from './about';
-import FaqPage from './faq';
-import SigninPage from './signin';
-import SignupPage from './signup';
-import ForgotpassPage from './forgotpass';
-import ChangepassPage from './changepass';
-import PricingPage from './pricing';
-import ClassesList from './classesList';
-import ClassDetailsPage from './classdetails';
-import ConfirmationPage from './confirmation';
-import BookingsPage from './bookings';
-import ProfilePage from './profile';
-import { Switch, Route, Router } from './../util/router.js';
-import Divider from './../components/Divider';
-import Footer from './../components/Footer';
-import './../util/analytics.js';
-import { ProvideAuth } from './../util/auth.js';
+import React from "react";
+import Navbar from "./../components/Navbar";
+import IndexPage from "./index";
+import AboutPage from "./about";
+import FaqPage from "./faq";
+import SigninPage from "./signin";
+import SignupPage from "./signup";
+import ForgotpassPage from "./forgotpass";
+import ChangepassPage from "./changepass";
+import PricingPage from "./pricing";
+import ClassesList from "./classesList";
+import ClassDetailsPage from "./classdetails";
+import ConfirmationPage from "./confirmation";
+import BookingsPage from "./bookings";
+import ProfilePage from "./profile";
+import { Switch, Route, Router } from "./../util/router.js";
+import Divider from "./../components/Divider";
+import Footer from "./../components/Footer";
+import "./../util/analytics.js";
+import { ProvideAuth } from "./../util/auth.js";
 
 function App(props) {
   return (
@@ -49,8 +49,6 @@ function App(props) {
 
             <Route exact path="/confirmation" component={ConfirmationPage} />
 
-            <Route exact path="/bookings" component={BookingsPage} />
-
             <Route exact path="/profile" component={ProfilePage} />
 
             <Route
@@ -58,9 +56,9 @@ function App(props) {
                 return (
                   <div
                     style={{
-                      padding: '50px',
-                      width: '100%',
-                      textAlign: 'center'
+                      padding: "50px",
+                      width: "100%",
+                      textAlign: "center"
                     }}
                   >
                     The page <code>{location.pathname}</code> could not be
@@ -76,8 +74,7 @@ function App(props) {
             color="white"
             size="medium"
             logo="/dropin-logo.svg"
-            description="A short description of what you do here"
-            copyright="© Company Name"
+            copyright="© DropIn"
           />
         </>
       </Router>
