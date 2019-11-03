@@ -7,8 +7,8 @@ import { Link } from "./../util/router.js";
 function ContentCard({ classDetail }) {
   return (
     <div className="column">
-      <div class="card">
-        <div class="card-image">
+      <div className="card">
+        <div className="card-image">
           <Link
             to={`/classes/${classDetail.id}`}
             key={`class-image-${classDetail.id}`}
@@ -21,11 +21,10 @@ function ContentCard({ classDetail }) {
           </Link>
         </div>
         <div className="card-content">
-          <span class="tag is-info ">{classDetail.owner.skillset[0]}</span>
-          <span class="tag is-light is-pulled-right">8</span>
-          <span class="tag is-info is-light is-pulled-right">
-            7:30PM
-            {/* {dayjs(classDetail.classDates[0].start).format('H:mm')} */}
+          <span className="tag is-info ">{classDetail.owner.skillset[0]}</span>
+          <span className="tag is-light is-pulled-right">8</span>
+          <span className="tag is-info is-light is-pulled-right">
+            {dayjs(classDetail.classDates[0].start).format("h:mm A")}
           </span>
 
           <h4
