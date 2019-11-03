@@ -30,7 +30,7 @@ function IndexPage(props) {
         items={classList.slice(0, 4)}
         color="white"
         size="medium"
-        title="Here's what people are saying"
+        title="Top classes in your area"
         subtitle=""
       />
     </>
