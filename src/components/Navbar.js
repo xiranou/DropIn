@@ -34,16 +34,21 @@ function Navbar(props) {
             </Link>
 
             {auth.user && (
-              <Link
-                className="navbar-item"
-                to="/signout"
-                onClick={e => {
-                  e.preventDefault();
-                  auth.signout();
-                }}
-              >
-                Sign out
-              </Link>
+              <>
+                <Link className="navbar-item" to="/profile">
+                  Profile
+                </Link>
+                <Link
+                  className="navbar-item"
+                  to="/signout"
+                  onClick={e => {
+                    e.preventDefault();
+                    auth.signout();
+                  }}
+                >
+                  Sign out
+                </Link>
+              </>
             )}
 
             {!auth.user && (
