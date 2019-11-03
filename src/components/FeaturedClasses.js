@@ -1,7 +1,7 @@
-import React from 'react';
-import ContentCard from './ContentCard';
-import Section from './Section';
-import './Features.scss';
+import React from "react";
+import ContentCard from "./ContentCard";
+import Section from "./Section";
+import "./Features.scss";
 
 function FeaturedClasses(props) {
   return (
@@ -10,7 +10,7 @@ function FeaturedClasses(props) {
         {props.title && <h1 className="title">{props.title}</h1>}
         <div className="columns">
           {props.items.map((item, index) => (
-            <ContentCard classDetail={item} />
+            <ContentCard key={`feature-class-${index}`} classDetail={item} />
           ))}
         </div>
       </div>

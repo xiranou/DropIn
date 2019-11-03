@@ -45,8 +45,8 @@ const Card = props => {
                 <p
                   style={{
                     display: '-webkit-box',
-                    webkitLineClamp: '3',
-                    webkitBoxOrient: 'vertical',
+                    WebkitLineClamp: '3',
+                    WebkitBoxOrient: 'vertical',
                     overflow: 'hidden'
                   }}
                 >

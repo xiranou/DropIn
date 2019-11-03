@@ -1,4 +1,6 @@
 import React from "react";
+import dayjs from "dayjs";
+
 import "./ContentCards.scss";
 import { Link } from "./../util/router.js";
 
@@ -15,23 +17,32 @@ function ContentCard({ classDetail }) {
           </Link>
         </div>
         <div className="card-content">
-          <span class="tag is-primary">{classDetail.owner.skillset[0]}</span>
-          <span class="tag is-secondary is-pulled-right">8 Credits</span>
-          <h4>{classDetail.title}</h4>
+          <span class="tag is-info">{classDetail.owner.skillset[0]}</span>
+          <h4 className="has-text-weight-semibold	is-family-primary">
+            {classDetail.title}
+          </h4>
+          <p class="tag is-secondary">
+            8 credits{" | "}
+            {dayjs(classDetail.classDates[0].start).format("ddd H:mm A")}
+          </p>
           <p
+            className="is-family-seconday"
             style={{
               display: "-webkit-box",
-              webkitLineClamp: "3",
-              webkitBoxOrient: "vertical",
-              overflow: "hidden"
+              WebkitLineClamp: "3",
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+              margin: "0.5rem 0"
             }}
           >
             {classDetail.description}
           </p>
-          <span
-            className="has-text-weight-heavy"
+          <p
+            className="is-italic has-text-weight-light"
             style={{ marginRight: "10px" }}
-          ></span>
+          >
+            Ratings: {classDetail.ratings[0].score}/5
+          </p>
         </div>
       </div>
     </div>
