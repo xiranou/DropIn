@@ -7,6 +7,7 @@ function FeaturedClasses(props) {
   return (
     <Section color={props.color} size={props.size}>
       <div className="container">
+        {props.title && <h1 className="title">{props.title}</h1>}
         <div className="columns">
           {props.items.map((item, index) => (
             <ContentCard classDetail={item} />
