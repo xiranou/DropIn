@@ -4,6 +4,7 @@ import Section from '../components/Section';
 import Map from '../components/Map';
 import { tags } from '../util/tags';
 import { useClassList } from '../util/requests';
+import * as R from 'ramda';
 
 const ClassesPage = () => {
   const [activeFilters, setActiveFilters] = React.useState([]);
@@ -25,7 +26,7 @@ const ClassesPage = () => {
   const filteredClasses = () => {
     if (activeFilters.length === 0) return classList;
     return classList.filter(apt =>
-      activeFilters.includes(apt.owner.skillset[0])
+      R.any(R.flip(R.contains)(activeFilters))(apt.owner.skillset)
     );
   };
 

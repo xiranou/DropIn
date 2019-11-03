@@ -1,5 +1,4 @@
 import React from 'react';
-import CenteredColumns from './CenteredColumns';
 import ContentCard from './ContentCard';
 import Section from './Section';
 import './Features.scss';
