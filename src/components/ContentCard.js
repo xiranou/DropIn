@@ -7,7 +7,7 @@ import { Link } from "./../util/router.js";
 function ContentCard({ classDetail }) {
   return (
     <div className="column">
-      <div className="card">
+      <div className="card" style={{ height: "400px" }}>
         <div className="card-image">
           <Link
             to={`/classes/${classDetail.id}`}
